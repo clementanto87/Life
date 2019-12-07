@@ -1,0 +1,5 @@
+Pure component only get render if the shallow comparison retrun TRUE in shouldComponentUpdate lifecycle method.
+
+For,
+1. Primitive: change of value will render the component.
+2. Complex or Reference Data types: only if the reference changes component will get re-rendered.

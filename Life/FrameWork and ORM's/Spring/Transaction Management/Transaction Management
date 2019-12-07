@@ -1,0 +1,12 @@
+Spring Transaction Management:
+
+	ACID:
+
+	1. Atomacity -> All step completed or none completed 
+
+	2. Consistency -> both the table has valid data
+
+	3. Isolation -> If multiple user accing the data; it should be sequncial access for the data.
+
+	4. Durablity -> 
+

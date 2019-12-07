@@ -1,0 +1,20 @@
+11 key words
+
+1. var
+
+2. if...else
+
+3. switch
+
+4. do..while
+5. for
+
+6. break
+7. continoue
+
+8. function
+9. return
+
+10. try..catch
+
+11. debugger

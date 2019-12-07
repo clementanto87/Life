@@ -1,0 +1,15 @@
+1. toString()
+
+2. toExponential(2)
+
+3. toFixed(2) -> 2 represent the decimal points
+
+4. toPrecision(2) -> 2 represent the lenght of the number
+
+5. valueOf() -> just return the value
+
+Conver to Number:
+1. Number()
+2. parseInt()
+3. parseFloat()
+ 

@@ -1,0 +1,34 @@
+1. toString()
+
+2. join(" * ")
+
+3. pop -> remove last element
+4. push -> insert last element
+5. shift -> remove first element and lower the index of others
+6. unShift() -> insert first element
+
+
+7. length
+
+8.delete
+
+9. A. splice() -> add elements 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+The first parameter (2) defines the position where new elements should be added (spliced in).
+The second parameter (0) defines how many elements should be removed.
+
+   B. splice(0,1) -> remove elements
+	0 -> start index
+	1 -> end index
+
+10. concat()
+
+11. slice(1) -> create new array doesnt modify exiting array
+
+12. toString()
+
+13. filter(data => {
+	return data > 10;
+});
+

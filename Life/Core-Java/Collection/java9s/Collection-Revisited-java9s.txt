@@ -1,0 +1,50 @@
+
+
+Interface in Collection:
+++++++++++++++++++++++++
+
+	1. Collection - Top of the hira..hy
+
+	2. List,
+	3. Set,
+	4. Queue.
+
+
+Properties of Collection:
+	
+	1. Order  -> When we itertate it come same order of insertion
+	2. Sorted -> it get sorted accound to the natural order of sorting
+
+
+Implementation:
+++++++++++++++++++++++++
+
+1. Set: 
+		a. HashSet
+		b. LinkedHashSet  -> extends -> HashSet
+
+		c.TreeSet -> Implements --->Sorted Set --> Navaigable Set
+
+
+2. List:
+		a. ArrayList,
+		b. Vector,
+		c. LinkedList -> implements -> Queue and de-Queue
+
+3. Queue:
+		a. PriorityQueue -> Implements -> Queue
+		b. LinkedList -> Implements -> Queue && de-Queue
+
+	De-Queue -> double ended queue
+
+4. Map:
+		It dont come under collection since it doesnt implement Collection interface
+
+		a. 	HashMap --> Implements --> Map
+		b.  LinkedHashMap -> Extends -> HashMap
+
+		c. HashTable -> Implements -> Map
+
+		d. TreeMap -> Implements -> Sorted Map && NavigableMap
+
+

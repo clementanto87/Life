@@ -1,0 +1,26 @@
+Parent properties (container):
+1. display: grid;
+
+2. grid-template-rows: 1fr | px | repeat(3, 2fr)
+3. grid-template-columns
+4. grid-template-areas:
+
+5. grid-gap: 20px
+6. grid-gap-rows:
+7. grid-gap-columns:
+
+8. grid-auto:
+9. grid-auto-rows: minmax(100px, auto) -> set min height and auto increment to fix the content
+
+
+Child (items) Properties:
+
+1. grid-row: 1 | 1 / 4 = row-start / span 2 (how much to extend)
+2. grid-row-start
+3. grid-row-end
+
+4. grid-column:
+5. grid-column-start:
+6. grid-column-end:
+
+7. grid-area : row-start / column-start / row-end(span 2) / column-end(span 3)	

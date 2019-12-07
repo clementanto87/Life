@@ -1,0 +1,19 @@
+How to call the store procedure from spring:
+
+1. with help of SimpleJdbcCall
+
+Step by Step:
+
+1. Create a bean for SimpleJdbcCall class in the spring xml config file,
+
+2. In DAO Layer -> 
+
+	1. Create the SimpleJdbcCall Instance variable
+	2. Create a setter method for the same,
+	3. Create a method from with we need to call a stored procedure
+			Step 1: simpleJdbcInstance.withProcedureName("Name_Of_The_Stored_Procedure");
+			Step 2: Create Object for MapSqlParameterSource i.e => MapSqlParameterSource inputMap = new MapSqlParameterSource();
+			Step 3: Add the input parameter to the mapInput => mapInput.add("Name_Of_Input_Parameter","Value_Of_Input_Paramtere");
+			Step 4: call -> simpleJdncInstanc.execute("MapSqlParameterSource_Object") method. This method call will return Map<String,Object>.
+			Step 5: Get the value from the map output value; And set the same to the Model class object and return the same.
+

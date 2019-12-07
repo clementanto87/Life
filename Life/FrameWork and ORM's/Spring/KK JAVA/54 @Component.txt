@@ -1,0 +1,16 @@
+
+@Component:
+
+For auto detect and auto config the class
+
+@Component
+class className{
+	
+}
+
+
+How to get the value from the properties files:
+
+<context:placeholder locations="classpath:file_location.properties" />
+
+@value(${user.userAccountNumber})

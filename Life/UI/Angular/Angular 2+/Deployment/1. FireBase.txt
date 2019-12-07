@@ -1,0 +1,15 @@
+Step 1: Login in to the firebase.
+
+Step 2: Create project in firebase
+
+Step 3: npm i -g firebase-tools in terminal
+
+Step 4: firebase login => a command to login firebase
+
+Step 5: firebase init
+
+Step 6: Select the project to deploy
+
+Step 7: ng build --prod => a command to build angular project
+
+Step 8: firebase deploy => a command to deploy firebase appplication

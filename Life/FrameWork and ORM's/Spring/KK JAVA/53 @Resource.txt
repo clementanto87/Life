@@ -1,0 +1,7 @@
+
+@Resource:
+
+		If more then 1 beans of same type -> to resolve the mapping  -> go for @resource annotation
+
+on property or setter method
+

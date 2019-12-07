@@ -1,0 +1,13 @@
+What is Speech?
+	How the the words of the speaker are quoted.
+
+Direct Speech:
+	Exact words of the speaker are encloused inside the quotes ("").
+Ex: Sam said "He is playing football"
+
+In-Direct Speech:
+	Actual words of the speaker are transformed for simplicity.
+Ex: Sam said that he was playing football.
+
+How to convert direct speech to indirect speech:
+

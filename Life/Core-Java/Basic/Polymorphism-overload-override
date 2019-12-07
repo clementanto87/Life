@@ -1,0 +1,22 @@
+1. OverLoading: 2
+	Must:
+		1. Same method name,
+		2. different number of parameter or order of parameter,
+	Not-applicable:
+		1. can be different return type,
+		2. can be any access modifier
+
+** if two int and long combination might lead to ambiguty
+
+2. Overridding: 4
+	Must:
+		1. Same method name,
+		2. Same parameter,
+		3. Same return type or covariant return type, public Parent print() | public Child print() or public Parent print() 
+ 		4. Child with broader or same access modifier (parent protected -> child same or public)
+
+** private cannot be overridden -> 
+1. Method is not visiable to the Child; 
+2. We can define method with the same name in child BUT we cant do below operation,
+EX: Parent p = new Child(); and class a method which is private in parent class | The method print() from the type Parent is not visible 
+** static cannot be overridden -> static method belong to class not the object | if we declar both the method as static no compile time error | if you call a method -> Parent p = new Child(); It will still call parent class method

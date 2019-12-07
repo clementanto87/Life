@@ -1,0 +1,91 @@
+1enum -> Know constants in java
+
+2. enum definition: Can be defined 
+	1. out-side the class
+	2. in-side the class
+
+3. enum can be used in switch-case -> make make sure only the constant defined in the enum can be give as case value.
+
+4. Variables and Methods can be created inside enum
+
+5. Constructor can be created inside enum
+
+6. Methods of enum:
+
+	a. ordinal -> gives index position's.
+	b. values  -> Mobile[] m = Mobile.values();
+
+7. enum extends  java.lang.Enum
+
+
+Example 1: Print enum
+______________________
+
+enum Mobile{
+	APPLE,SAMSUNG,HTC;
+}
+
+public class EnumExample{
+	
+	public static void main(String[] args){
+	System.out.println(Mobile.APPLE); //Result -> APPLE
+	}
+}
+
+Example 2: switch-case | inside the class
+__________________________________________
+
+public class EnumExample {
+	
+	enum Mobile{
+		APPLE,SAMSUNG,HTC,REDMI;
+	}
+
+	public static void main(String[] args){
+		Mobile m = Mobile.APPLE;
+		
+		switch (m) {
+		case APPLE:
+			System.out.println("Apple is best phone");
+			break;
+		case REDMI:
+			System.out.println("Redmi is my phone");
+			break;
+		
+		default:
+			System.out.println("default method");
+			break;
+		}
+	}
+}
+
+Example 3: How to define varaible and method and assign value
+
+public class EnumExample {
+	
+	enum Mobile{
+		
+		APPLE(100),SAMSUNG,HTC,REDMI(50);
+		
+		int price;
+		//Constructor's
+
+		Mobile(){
+			
+		}
+		Mobile(int value){
+			price = value;
+		}
+		
+		
+		
+		public int getPrice(){
+			return price;
+		}
+	}
+
+	public static void main(String[] args){
+		Mobile m = Mobile.APPLE;
+		System.out.println(m.getPrice());
+		}
+	}

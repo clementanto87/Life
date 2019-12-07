@@ -1,0 +1,119 @@
+package com.infotech.datastructuretree;
+
+public class TreeApp {
+	
+	public static void main(String[] args) {
+		Tree t = new Tree();
+		t.add(8);
+		t.add(3);
+		t.add(1);
+		t.add(6);
+		t.add(4);
+		t.add(7);
+		t.add(10);
+		t.add(9);
+		t.add(14);
+		t.add(13);
+		
+		
+		t.delete(6);
+		t.show();
+	}
+
+}
+
+class Node{
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		this.data = data;
+	}
+}
+
+class Tree{
+	
+	Node root;
+	
+	public void add(int data) {
+		root = addData(root,data);
+	}
+
+	private Node addData(Node n, int data) {
+		if(n == null)
+		return new Node(data);
+		
+		if(data<n.data) {
+			n.left = addData(n.left, data);
+		}else {
+			n.right = addData(n.right, data);
+		}
+		
+		return n;
+	}
+	
+	public void show() {
+		showData(root);
+	}
+
+	private void showData(Node n) {
+		if(n == null) {
+			return;
+		}
+		
+		showData(n.left);
+		System.out.println(n.data);
+		showData(n.right);
+		
+	}
+	
+	
+	public void delete(int data) {
+		root = deleteData(root,data);
+	}
+
+	private Node deleteData(Node n, int data) {
+		if(n == null)
+		return null;
+		
+		if(data<n.data) {
+			n.left = deleteData(n.left, data);
+		}else if(data>n.data) {
+			n.right = deleteData(n.right, data);
+		}else {
+			if(n.left == null || n.right == null) {
+				Node temp = null;
+				temp = n.left == null ? n.right : n.left;
+				
+				if(temp == null) {
+					return null;
+				}else {
+					return temp;
+				}
+			}else {
+				Node successor = getsucessor(n);
+				n.data = successor.data;
+				n.right = deleteData(n.right, successor.data);
+			}
+		}
+		
+		
+		return n;
+	}
+
+	private Node getsucessor(Node n) {
+		
+		if(n == null) {
+			return null;
+		}
+		
+		Node temp = n.right;
+		
+		while(temp.left != null) {
+			temp = temp.left;
+		}
+		
+		return temp;
+	}
+}

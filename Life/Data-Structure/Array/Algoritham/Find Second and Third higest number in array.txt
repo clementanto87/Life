@@ -1,0 +1,31 @@
+package com.datastructure.array;
+
+public class SecondHigestOfArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[] = { 100, 2, 300, 45, 33 };
+
+		int second = 0;
+		int first = 0;
+		int third = 0;
+		for (int i = 0; i < a.length; i++) {
+
+			if (first < a[i]) {
+				first = a[i];
+			}
+			if (a[i] < first && a[i] > second) {
+				second = a[i];
+			}
+			if (a[i] < first && a[i] < second && a[i] > third) {
+				third = a[i];
+			}
+		}
+
+		System.out.println(first);
+		System.out.println(second);
+		System.out.println(third);
+
+	}
+
+}

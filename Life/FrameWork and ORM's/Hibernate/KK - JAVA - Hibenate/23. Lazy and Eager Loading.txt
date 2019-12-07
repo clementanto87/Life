@@ -1,0 +1,7 @@
+
+
+By defaule hibernate is lazy 
+
+It will not load the embeeded value when we request for the object
+
+To Make the hibernate eager -> @ElementCollection(fetch=FetchType.EAGER)

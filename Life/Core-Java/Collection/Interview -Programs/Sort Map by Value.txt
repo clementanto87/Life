@@ -1,0 +1,100 @@
+import java.util.*;
+import java.util.Map.Entry;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class Play {
+
+	public static void main(String[] args) {
+		
+		TreeMap<Integer, Emp> tree = new TreeMap<>();
+		tree.put(1, new Emp(105));
+		tree.put(2, new Emp(104));
+		tree.put(3, new Emp(103));
+		tree.put(4, new Emp(102));
+		tree.put(5, new Emp(101));
+		
+		//Collections.sort(new ArrayList<>(set));
+		
+		//1. Using stream API
+		List<Map.Entry<Integer, Emp>> list = tree.entrySet().stream().sorted(new ComparingEmp()).collect(Collectors.toList());
+		
+		//2. Treditional approach
+		Set<Map.Entry<Integer, Emp>> set = tree.entrySet();
+		
+		List<Map.Entry<Integer, Emp>> list = new ArrayList<>(set);
+		
+		Collections.sort(list,new ComparingEmp());
+		
+		
+		//tree.entrySet().forEach(System.out::println);
+		
+		list.forEach(System.out::println);
+		
+	}
+
+}
+
+
+class ComparingEmp implements Comparator<Map.Entry<Integer, Emp>>{
+
+	@Override
+	public int compare(Entry<Integer, Emp> o1, Entry<Integer, Emp> o2) {
+		// TODO Auto-generated method stub
+		return o1.getValue().getId() - o2.getValue().getId();
+	}
+
+
+	
+}
+
+class Emp implements Comparable<Emp>{
+	private int id;
+	
+	Emp(int id){
+		this.id = id;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@Override
+	public String toString() {
+		return "Emp [id=" + id + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Emp other = (Emp) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+
+	@Override
+	public int compareTo(Emp o) {
+		System.out.println("comparing");
+		//return o.id-this.id;
+		return this.id-o.id;
+	}
+
+}

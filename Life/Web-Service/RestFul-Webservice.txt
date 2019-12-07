@@ -1,0 +1,72 @@
+RestFul WebService:
+	-> Representational State Transfer
+
+Rest user -> HTTP Protocol
+
+URI - > Resource based URI
+
+Methods -> GET, POST, PUT , DELETE
+
+Nature -> Stateless Nature / Singleton
+
+HATEOAS -> Hypermedia As The Engine Of Application State
+
+IDEM-POT-ENCE -> POST dont repeate call - > it create duplicate entry (NOT - IDEM-POT-ENCE)
+				BUT GET, DELETE and PUT are safe -> Can we called any number of time (So it is called IDEM-POT-ENCE)
+
+
+To Send XML Response:
+
+Class Level annotation:
+__________________________
+@PATH("/") ->Both class and method to represent the URI
+@Produces -> MediaType.Application_XML | return type 
+@Consumes -> MediaType.Application_JSON | method gets
+
+Method Annotations:
+____________________
+@GET, @POST, @PUT and @DELETE
+ 
+XML Response:
+______________
+@xmlRootElement -> on the model class to geneate xml response
+@xmlElement -> over the instance varaible
+@xmlTransient -> to ignore the field from send in response
+
+Method Level Annotation: ** To get the data from the client ** 
+___________________________
+1. @PathParam -> catch the value from the URI -> EX: message/{id} | public String getMessage(@PathParam("id") String id)
+
+2. @QueryParam -> Get the query string from the URL | messages?year=2015 -> public String getMessage(@QueryParam("year") int year)
+
+3.@MatrixParam -> to get the value from the url | message:year=205 -> public String getMessage(@MatrixParam("year") int year)
+
+4.@HeaderParam -> to get the custome header value | set header value | public String getMessage(@HeaderParam("year") int year)
+** send authentication tokens etc...
+
+5.@CookieParam -> to get the value of cookie | public String getMessage(@CookieParam("year") int year)
+
+
+6. @Context UriInfo -> get the query string and other related to URL
+
+7. @Context HttpHeaders -> get the cookie and header details
+
+8. @BeanParam -> To get all the parameter value in single bean class | public String getMessage(@BeanParam BeanFilter beanfilter)
+
+Class BeanFilter{
+	private @Queryparam("year") int year;
+	private @Queryparam("start") int start;
+	private @Queryparam("end") int end;
+
+	.... getters and setters 
+ }
+
+
+Sub-Resource:
+______________
+
+instead of the actural response | send the object of the sub-resource class as response -> so that jersey will go to the target class and search for the mapping resource
+
+
+Sending status code & Location header:
+______________________________________

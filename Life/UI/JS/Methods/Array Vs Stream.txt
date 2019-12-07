@@ -1,0 +1,70 @@
+InterMedia Operation:
+1. filter <----------> filter
+2. map  <------------> map
+3. flatMap
+4. sorted <---------> sort
+5. distinct
+6. peek
+7. skip  <----> slice(start,end)
+8. limit
+
+
+
+Terminal Operation:
+1. forEach <-------------> forEach
+2. forEachOrder
+3. reduce <--------------> reduce
+4. count
+5. findFirst <--------> find or findIndex
+6. findAny
+7. anyMatch <----------> some or include
+8. noneMath
+9. allMatch <-----------> every
+10. min <---> Math.min.apply(null,array)
+11. max <---> Math..min.apply(null,array)
+
+
+JavaScripts:
+1. concat --> arr1.concat(arr2) 
+2. every  --> all the elements of the array mathing the criteria | boolean
+3. some ----> any one of the element mathcing the criteria | boolean
+4. fill(No Lambda) ----> replace the all the element with given element (arr.fill("data to fill the elements")) | array
+5. find ----> returns the matching element or undefined | element or undefined
+6. findIndex --> return the matching index or -1 | index or -1
+7. forEach ----> Loop the array | array
+8. Array.form == Arrays.asList == Stream.of | array
+9. includes(No Lambda) -> true if element present or false | boolen
+10. indexOf --> index if present or -1 | index or -1
+11. isArray --> Check for the array | boolean
+12. join ---> join the elements of the array | array
+13. lenght --> find the length of the array | number
+14. lastIndexOf --> opposite to indexOf | number 
+15. map -> extract or transform data | array 
+16. pop -> Remove last element | element
+17. prototype -> to create the custome function | any 
+18. push --> add item to last index location | element 
+19. reduce --. find sum of the array elements | number 
+20. reverse --> revers the array | array 
+21. shift --> remove the first element | element 
+22. unShift --> add the item into first index | array
+23. slice ---> act as a substring | array
+24. sort ---> sort the items in arrray | array 
+25. splice ---> add or remove element from the array
+
+a > Array.form
+c > concat
+e > every
+f > find, findIndex, fill
+i > includes, indexOf, isArray
+j > join
+l > lastIndexOf, length
+m > map
+p > pop, push, prototype
+r > reduce, reverse, 
+s > some, shift, slice, splice, sort
+u > unshift
+
+
+
+
+ 

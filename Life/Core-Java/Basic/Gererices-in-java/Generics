@@ -1,0 +1,40 @@
+Generic:
+
+-->Type Safety<--
+
+import java.util.ArrayList;
+
+public class TestApp {
+	
+	public static void main(String[] args){
+		Continer<Integer> obj = new Continer<>();
+		obj.value = 101;
+		obj.show();
+		
+		obj.demo(new ArrayList<Double>());
+	}
+
+}
+
+// T can be any child of Number 
+class Continer<T extends Number>{
+
+	T value; 
+	
+	public void show(){
+		System.out.println(value.getClass().getName());
+	}
+
+	public T getValue() {
+		return value;
+	}
+
+	public void setValue(T value) {
+		this.value = value;
+	}
+	
+	//This methood can accepet any element parent of Integer
+	public void demo(ArrayList<? super Integer> list){
+		
+	}
+}

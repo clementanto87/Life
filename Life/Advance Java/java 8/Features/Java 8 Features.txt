@@ -1,0 +1,138 @@
+Features:
+
+1. forEach() method in the iterator, 
+2. default and static menthod in interface,
+3. Functional interface,
+4. Lamda expression,
+5. Method reference,
+
+6. Stream API for operation with collections
+
+7. Modification in concurrent API
+8. Improvement in TIME API 
+
+
+1. forEach() -> iterator interface
+		Details Expression: 
+
+		List<T> list = new ArrayList<T>();
+		list.forEach(Object of Consumer Functional Interface);
+		Consumer<T> c = new Consumer<T>(){
+				public void accept(T a){
+					System.out.println(a);
+				}
+		};
+
+		Easy Expression:
+
+		list.forEach((i) -> System.out.println(i)); //Lamda expression
+		list.forEach(System.out::println) //Method reference
+
+
+2. default() and static() methods in INTERFACE
+	1. if 2 interface haveing same method - > compiler will force to overrid the method in the child class -> to avoild diamond problem
+
+	2. if interface and class having same method -> class is give preference
+
+	3. if try to overrid system defined method -> compiler will not allow Ex: equals method of object class
+
+	4. if only one implemetion of the interface and no conflict of the methods -> compiler will not force to overrid the method.
+
+	** it is very helpful for lambra expression and method referencing
+
+6. JAVA STREAM API - Work with Collection
+
+Intermediate Operation:
+_______________________
+
+		Java 8 Stream intermediate operations return another Stream which allows you to call multiple operations in a form of a query. Stream intermediate operations do not get executed until a terminal operation is invoked. All Intermediate operations are lazy, so they’re not executed until a result of a processing is actually needed. Traversal of the Stream does not begin until the terminal operation of the pipeline is executed.
+
+Here is the list of all Stream intermediate operations:
+
+filter()
+map()
+flatMap()
+distinct()
+sorted()
+peek()
+limit()
+skip()
+
+filter() -> Apply filter >,<,!= and ect..
+map() -> do some arithmatic operation like *2 , /2 and also get a specife value from the custome objects
+flatMap() -> get the string from the List<String> of stream; Stream<List<String>> s; Stream s1 = s.flatMap()
+
+			Stream<List<String>> namesOriginalList = Stream.of(
+				Arrays.asList("Pankaj"), 
+				Arrays.asList("David", "Lisa"),
+				Arrays.asList("Amit"));
+			//flat the stream from List<String> to String stream
+			Stream<String> flatStream = namesOriginalList
+				.flatMap(strList -> strList.stream());
+		
+			flatStream.forEach(System.out::println);
+
+
+distinct() -> get the distinct element from the stream
+sorted() -> use to sort ; list.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);;
+peek()-> The Stream.peek() method is mainly to support debugging, where you want to see the elements as they flow past a certain point in a pipeline.
+		Stream.of("bus", "car", "bycle", "flight", "train")
+                .filter(e -> e.length() > 3)
+                .peek(e -> System.out.println("Filtered value: " + e))
+                .map(String::toUpperCase)
+                .peek(e -> System.out.println("Mapped value: " + e))
+                .collect(Collectors.toList());
+limit()  -> set max limte for the list to process; fist n element will be consider for creation of new stream.
+skip() -> skip th n number of items in the list. first n number of element will be skiped.
+
+Terminal operations:
+______________________
+
+Java-8 Stream terminal operations produces a non-stream, result such as primitive value, a collection or no value at all. Terminal operations are typically preceded by intermediate operations which return another Stream which allows operations to be connected in a form of a query.
+
+toArray() 
+count()
+collect()
+reduce()
+forEach()
+forEachOrdered()
+min()
+max()
+anyMatch()
+allMatch()
+noneMatch()
+findAny()
+findFirst()
+
+Here is the list of all Stream terminal operations:
+
+1. toArray() -conver stream to array
+Example:
+________
+			List<Emp> list = Arrays.asList(new Emp(11), new Emp(10), new Emp(9));
+			Object[] objArr = list.stream().toArray();
+
+2. collect() -> Convert list to set or any type
+			list.stream().collect(Collectors.toSet());
+
+3. count() -> count number of elements or items in the list
+			List<Emp> list = Arrays.asList(new Emp(11), new Emp(10), new Emp(9));
+			long l = list.stream().count();
+4. reduce() -> to aggregate operation  | get single value
+			List<Integer> list = Arrays.asList(1,2,3,4,5);
+			int i = list.stream().reduce(0,(a,b) -> a+b);
+			int i = list.stream().reduce(1,(a,b) -> a*b);
+
+5. forEach() -> Internal iteration of the elements or object
+			List<Integer> list = Arrays.asList(1,2,3,4,5);
+			list.stream().forEach(System.out::println);
+			list.stream().forEach(i -> System.out.println(i));
+
+6. forEachOrdered()
+7. min() -> get the min value from the list
+8. max() -> get the max value from the list
+9. anyMatch() -> 
+10. allMatch()
+11. noneMatch()
+12. findAny()
+13. findFirst()

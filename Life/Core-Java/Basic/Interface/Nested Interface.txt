@@ -1,0 +1,38 @@
+Nested Interface?
+
+	Interface inside interface or class is called nested interface
+
+1. Interface inside the class -> access specifier can be public,default and protected
+
+class MyClass{
+	
+	interface MyInterface{
+		public long getAccountNumber();
+	}
+}
+
+
+class MyChildClass implements Myclass.MyInterface{
+	
+	public long getAccountNumber(){
+
+		return 055153805516;
+	}
+}
+
+2. Interface inside interface -> access specifier can be public and default and protected
+
+interface MyInterface1{
+	
+	interface MyInterface2{
+		public long getAccountnumber();
+	}
+}
+
+
+class MyClass implements MyInterface1.MyInterface2 
+{
+	public long getAccountNumber(){
+		return 55012586363;
+	}
+}

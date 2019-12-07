@@ -1,0 +1,8 @@
+
+Logical Operation:
+
+Syntex:
+
+<bean>
+	<property name="" value="#{beanName.propertyValue>=30 and beanName.propertyValue>=30 ? beanName : beanName}" /> 
+</bean>

@@ -1,0 +1,4 @@
+Command:
+
+1. docker run -p <map container port : system port> <Image-Name>
+	Ex: docker run -p 8081:8081 docker-mongo

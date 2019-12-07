@@ -1,0 +1,10 @@
+
+Different types of bean resolvers?
+	
+	1. Internal view resolver,
+	2. Resource bundle,
+	3. Excle,
+	4. Multipart resolver
+	5. Theme
+	6. Locale
+	7. HandlerExceptionResolver

@@ -1,0 +1,4 @@
+How to Stop the thread?
+
+	1. stop() method: Of the thread has be depricated or removed.
+	2. thread.interrupt(); is use to stop the thread exeution in a proper way

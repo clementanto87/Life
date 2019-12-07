@@ -1,0 +1,41 @@
+
+Annotation Configuration:
+
+1. From spring 2.5 version
+
+2. Annotation based configuration happens first -> followed by -> xml configuration (xml override)
+
+3. To enable annotation in spring application -> in configuration.xml -> <context:annotation-config/>
+
+
+Common Annotations:
+
+	@Required:
+		on setters method -> to make sure value is set for the field.
+
+	@Autowire
+		on the class state -> to inject the instance to the field
+
+	@Qualifier
+		on the field -> if more than 1 bean of same type is create then we go for using this annotation
+
+
+JSR 250 annotation:
+
+@Resource:
+		on field or method
+
+@PostConstruct
+		on the method, this method would be called after the instance of the bean is created.
+
+@PreDestroy
+		on the method, before the bean is destroyed.
+
+
+@Componet
+
+@Controller
+@Service
+@Repository
+
+@Scope

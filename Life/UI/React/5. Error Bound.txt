@@ -1,0 +1,6 @@
+Error Boundary:
+	React class component becomes error boundary which catch the error and render fall-back UI.
+
+It has 2 life cycle method,
+	1. getDerivedStateFromError -> define the condition to render to generate fall back UI.
+	2. ComponentDidCatch -> Just to log the errors

@@ -1,0 +1,40 @@
+
+******************@Resource and @Qualifier user for autowire by NAME****************
+			>>>>>>>>>>>>>>By default it autowire by type<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+Annotation - based - configuration:
+___________________________________
+
+@Configuration -> Will tell the app-context this is the CONFIGURATION file
+@Bean -> will return the BEAN that will be available in the spring context | **EXPLICITLY** creating the bean
+
+@ComponentScan(basePackage="")
+
+Stereotypic Annotation:
+_______________________
+@Component -> auto-detect , auto-config and create bean | **IMPLICITLY** bean creation
+		@Controller, @Service, @Repository
+@Primary -> If two class implementing same interface | then we get unique bean error | giving primary annotation this class will be picked
+
+@Qualifier("name_of_the_bean") -> Autowire by name
+
+@Autowire -> Map the instance variable or member variable with the bean. Autowire by type default
+
+
+
+MVC - Annotations:
+___________________
+
+@RequestParam -> to get value from the request scope | request.getetParameter("name");
+@ModelAttribute -> to get the FORM data in one single bean
+@RequestMapping("/") -> provide url address
+@PathVariable
+
+JSR - 250 Annotations:
+______________________
+@Resource -> Autowire by NAME. 
+@PostConstruct -> method will be called after the bean is created
+@PreDestroy -> method is called once the bean is destroyed
+
+ac.registerShutdownHook(); or ac.close() -> will destroy the bean

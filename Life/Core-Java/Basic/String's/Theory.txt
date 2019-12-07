@@ -1,0 +1,29 @@
+
+1. String -> Immutable
+
+What is Immutable?
+		State of the object cant be changed; If we try to change the state new object instance will be created.
+
+String Constant pool:
+_____________________
+	String literals are stored in the SCP.
+		EX: String name = "Mack";
+
+NEW keyword:
+____________
+	Object created using new key word; memory will be allocated in the heap area.
+	String name = new String("MACK");
+
+intern()
+_______
+	when we call intern method on the object of the string; object will be moved from the heap to string constant pool.
+
+Why String immutable?
+	Because of the concept of string constant pool; single memory location in the heap might have many refrences in the stack area. If the string is mutable; there will be inconsistnecy - if one object is changed it will impact all the refrences.
+
+	In order to avoid that string is made immutable.
+
+
+2. StringBuilder -> Mutable | Not thread safe | Not Syn...ized
+
+3. StringBuffer -> Mutable | Thread safe | Syn..ized

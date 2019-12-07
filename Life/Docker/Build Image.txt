@@ -1,0 +1,6 @@
+## Command to build the image
+
+Step 1: Go to the directory; where is the docker file is located
+
+Step 2: Commmand " docker build -f <Name-Of-DockerFile>" -t <Tag-Name -> (IMAGE NAME TO BE Create)> "" .
+			Ex: docker build -f DockerFile -t docker-mongo .

@@ -1,0 +1,128 @@
+*******************************************Spring Interview Question and Answers**********************************************
+
+1. What is spring framework, features and advantage?
+	Def: Its light weight, powerful application development framework for j2ee
+
+	1. Modular Framework
+	2. Light Weight
+	3. End to End Development
+	4. Inversion of control
+	5. Aspect Oriented Programming
+	6. Containers
+	7. MVC FrameWork
+	8. Transaction Management
+	9. Abstract layer for JDBC
+	10. Easy to Integrate with frameworks Ex: struts, JSF, Hibernate etc
+	11. Easy testing
+
+2. Spring framework module?
+		
+		1. Test Module
+
+		2. Core Module
+			a. Beans
+			b. Core
+			c. Context
+			d. Expression Language
+
+		3. AOP
+		4. Instrumentation
+		5. Data Access / Integration 
+			a. JDBC
+			b. ORM
+			c. OXM
+			d. JMS
+			e. Transcation
+
+		6. Web
+			a. Web
+			b. Servlet
+			c. Portlet
+
+3. Dependency lookup?
+		-> tight coupling 
+	class Employee{
+		private Address address;
+
+		//Tight Coupling, since the object is created inside the construcctor itself
+		Employee(){
+		address = new Address();
+		}
+	}
+
+4. Dependency Injection?
+		In spring DI means -> container takes care of instantation, initilization and maintaing the life cycle of the object.
+
+	** instead we explicitly force to provide the dependency, spring container takes care of the injecting the dependency.
+
+5. IOC -> Inversion of Controle
+		Its a design pattern -> To achive DI -> we are inverting the control of instation object here -> We are here giving permission to spring to create and assign the value to the object created.
+
+6. How many ways to create spring metadata or configurtion file?
+		1. xml based,
+		2. Annotation based -> Spring 2.5
+		3. Java-based Configuration -> spring 3
+
+7. Bean Factor VS Applicationcontext?
+		Bean Factor: Lazy Loading
+				Instantiation and wiring, support lazy loading,
+
+		ApplicationContext: Eager Loading
+				MessageSource Access (i18n)
+				ApplicationEvent publishing
+
+8. Different type of DI?
+		1. Setter based, -> Partial injection
+		2. Constructor based -> Complete injection, mandatory to pass all the value
+
+	** setter overrides the constructor injection
+
+9. Spring bean properties?
+		1. class
+		2. name / id 
+		3. scope
+		4. constructor arguments
+		5. properties
+		6. autowiring mode
+		7. lazy-initalization mode
+		8. initilization method
+		9. destruction method
+		10. primary
+		11. autowire-candidate
+		12. autoswire
+		13. required
+
+
+10. Bean Life Cycle?
+		1. Spring container read bean defination from configuration file,
+		2. Spring container creates an instance of the bean using java reflection API,
+		3. If any properties are mentioned, then they are also applied. if it is bean then the dependency is also resolved.
+
+11. Scope of the bean?
+		Core Module:
+			1. singelton (default) -> only on object for the spring context
+			2. prototype -> every time new object would be created for each getbean
+		Web Module:
+			3. request -> Only valid for web-aware application context. For each request new object would be created
+			4. session -> Only valid for web-aware application context. For each session new object would be created
+			5. application ->Life cycle for servletcontext. Only web-aware application context.
+			6. websocket -> web-aware -> life cycle of websocket.
+
+12. How to use multiple-configuration file?
+		<import resource="application-context-1" />
+
+13. Autowiring?
+		1. No -> use ref tag and map the bean with other bean | can be used for smaller project
+		2. byName -> spring look for the bean with the same name. | @Qualifier and @Resource -> JSR250 annotation
+		3. byType -> look for the same type -> there should be only one bean of the same type.
+		4. byConstructor -> based on the constructors
+
+14. Annotations?
+		@Controller -> at the presentation layer 
+		@Service -> business logic 
+		@Repository -> DAO layer
+
+		@Component -> stereotypic annotation -> auto-detect and auto-configure the bean
+
+
+

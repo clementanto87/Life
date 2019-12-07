@@ -1,0 +1,12 @@
+
+1. method base query
+2. @NamedQuery
+3. @NamedNativeQuery
+4. @Query
+
+For Update:
+5. @Modifying
+6. @Transaction
+
+@Query("select T from Ticket T where bookingid=:booking_id")
+@param("booking_id")

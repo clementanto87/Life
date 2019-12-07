@@ -1,0 +1,77 @@
+There are 3 different ways we can break singleton design patter,
+
+1. By implementing serilizable interface 
+2. By implementing clonable interface 
+3. With Reflection Api -> With help of reflection we can examin and modify the behaviour of any class. It is possible to access private methods as well.
+
+
+How to resolve:
+
+1. SERILIZABLE:
+	Override readResolve - Method in the singelton class
+
+	Syntex:
+
+		1. class Singelton implements Serilizable
+
+	Solution:
+
+		2. private Object readResolve(){
+			return "object of singelton";
+		}
+
+2. CLONABLE:
+	Two ways, this issue can be resolved.
+
+	Syntex:
+
+		1. class Singelton implements Clonable
+
+		2. private Object clone(){
+			return super.clone()
+		}
+	Solution:
+	
+	1. Inside clone method, return instance of singelton object itself.
+			Syntex:
+
+			private Object clone(){
+			return getInstance();
+			}
+
+	2. Throw exception, when cloning the singelton class
+	
+			Syntex:
+
+			private Object clone(){
+				throw new CloneNotSupportedException();
+			}		
+
+
+3. Reflection API
+
+	One can break singelton with help of newInstance() method in reflection API.
+
+
+	Solution:
+
+		There are 2 solution to fix this issue. Both the solution is constructor specific solution
+
+
+	1. Throw Exception from the constructor:
+
+		private Singelton(){
+			if(singelton != null ){
+				throw new IllegalArgumentException(" Error Messsage ");
+			}
+		}	
+
+	2. Throw Error:
+	
+		private Singelton(){
+		if(singelton != null ){
+			System.exit(0);
+		}
+		}	
+
+

@@ -1,0 +1,68 @@
+
+4 types of mapping:
+
+1. @OnetoOne
+2. @ManytoOne
+3. @OnetoMany 
+4. @ManytoMany
+
+1. @OnetoOne: Just annotate in the Student class alone: 1 Student -> 1 Laptop | 2 table created | extra lid in the student table 
+
+Class Student{
+	int sId;
+	String sName;
+
+	@OnetoOne
+	Laptop laptop;
+
+}
+
+Class Laptop{
+	int lid;
+	int lname;
+}
+
+2. @OnetoMany <--> @ManytoOne: Have to annotate both the class: 1 Student -> Many Laptops | 2 tables | extra row in laptop table
+
+Class Student{
+	int sId;
+	String sName;
+	
+	** if we dont mention mappedBy 3 table will be created (Student,Laptop,Student_Laptop)
+
+	@OnetoMany(mappedBy="Name_of_the_feild_in_other_class")
+	List<Laptop> laptops = new ArrayList<>();
+
+} 
+
+** Extra row of sId as a foreign key will be created in the Laptop table 
+Class Laptop{
+	int lid;
+	int lname;
+
+	@ManytoOne
+	Student student;
+}
+
+
+3. @ManytoMany: Have to annotate both the class : Many Student <-> Many Laptop
+
+Class Student{
+	int sId;
+	String sName;
+	** if we dont mention mappedBy = 4 table will be created. (Student,Laptop,Student_Laptop,Laptop_Student)
+	** with mappedBy = 3 table will created (Student, Laptop and Laptop_Student)
+	@ManytoMany(mappedBy="Name_of_the_filed_in_other_class")
+	List<Laptop> laptops = new ArrayList<>();
+
+}
+
+** One extra table would be create Laptop_Student table
+
+Class Laptop{
+	int lid;
+	int lname;
+
+	@ManytoMany
+	List<Student> student = new ArrayList<>();
+}

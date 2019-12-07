@@ -1,0 +1,7 @@
+1. If there are more than one SUB-CLASS for the SUPER-CLASS; based on the input provided; We have to create the object is called Factor design pattern.
+
+2. Instead of CLIENT itself create a instance of the class; 
+
+Client will create a object of the abstract class and from the instance created object of the actual method is created
+
+In the Abstract Factory pattern, we get rid of if-else block and have a factory class for each sub-class. Then an Abstract Factory class that will return the sub-class based on the input factory class. At first, it seems confusing but once you see the implementation, it’s really easy to grasp and understand the minor difference between Factory and Abstract Factory pattern.

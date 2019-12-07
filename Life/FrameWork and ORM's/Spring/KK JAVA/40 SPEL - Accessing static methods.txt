@@ -1,0 +1,7 @@
+
+Static Method access from the bean.xml file:
+
+Syntex:
+
+#{T(java.lang.math).random()}
+#{t(java.lang.math).PI}

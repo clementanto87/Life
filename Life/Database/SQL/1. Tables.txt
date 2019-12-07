@@ -1,0 +1,3 @@
+Table:
+
+	its a database object -> contain rows and column

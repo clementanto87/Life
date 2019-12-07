@@ -1,0 +1,31 @@
+Verbs:
+Tell about 1. Action or 2. State of the subject.
+Action Verb:
+	Run, Raid, jump, play
+
+State Verbs:
+	feels, am, is
+
+Types of verbs:
+	1. Main
+	2. auxliary
+Main:
+	EX: car runs -> runs in main verb
+Auxilary:
+	They cant standalone they come with main verb.
+	Is, has, have, do, does, will, shall, can, might, must, may
+
+Properties of verb:
+	1. Verb can change depending in subject.
+		I am Tall -> first person
+		You are tall -> second person
+		She is tall -> Third Person
+
+	2. Change based on the time.
+
+Form of verb:
+	1. Base -> v1
+	2. Past -> v2
+	3. Past Participle -> v3
+	4. s/es/cs form -> Vs/es
+	5. ing -> Ving

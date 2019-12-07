@@ -1,0 +1,34 @@
+T -> Topic
+S -> Supporting Sentence
+E -> Example 
+A -> Alternative
+So -> Solution 
+R -> Result
+
+Cohesive Devices:
+
+1. Begin an opinion
+	Firstly, ...
+	One advantage / idea / problem is ...
+	The most significant idea / problem is ...
+	First and foremost, ...
+2. Describe Result,
+	As a result,
+	As a consequence,
+	Therefore,
+	The result of this is,
+3. Give Reason
+	This is because
+	The reason of this is
+	This happens because
+	This is an advantage / disadvantage / problem because 
+4. Give Example
+	For example,
+	To illustrate,
+	For instance,
+	To illustrate this point,
+
+5. Clarify a point
+6. Link ideas
+7. Switch arguments
+8. Make another point

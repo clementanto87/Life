@@ -1,0 +1,19 @@
+1. docker images --> view all the images
+
+2. docker rmi <image name> --> Remove image
+
+3. docker rm <container Id> --> Remove container
+
+4. docker ps -a --> View all the containers
+
+5. docker stop -> is to stop the container
+
+
+_________________________________________________
+############################## BUILD ###########################
+1. docker build -f <DOCKER-FILE-NAME> -t <IMAGE-NAME> .
+	Ex: docker build -f DockerFile -t springboot-mongoApp
+
+############################## RUN ##############################
+2. docker run -p <map container port : system port> <Image-Name>
+	Ex: docker run -p 8081:8081 docker-mongo

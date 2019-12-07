@@ -1,0 +1,6 @@
+Memo Components are same as pure component for the functional or presentation component.
+
+function Memocomp() {
+}
+
+export default React.memo(Memocomponent);

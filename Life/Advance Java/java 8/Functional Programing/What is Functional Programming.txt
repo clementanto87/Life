@@ -1,0 +1,31 @@
+
+What is functional programing?
+
+	Most successful programing approach is OBJECT oriented programming approch; 
+
+	But functional programing approaches has some user,
+			1. when working with multi-thread environment,
+			2. Working on the stream of data's.
+
+
+2 Important concepts of functional programming:
+
+	1. Avoid mutable state,
+	2. Statless - Functions,
+	3. Only method scope variable should be used.
+
+1. Avoid mutable state:
+		
+		public void add(int a, int b){
+				this.total = a + b; // here we are modifing the state of the object inside the method.
+		}
+
+2. Statless - functions or methods:
+		
+		public void add()
+		{
+				this.total = this.a + this.b; // here we are reading the state of the object to perform the addition operations
+		}
+
+
+

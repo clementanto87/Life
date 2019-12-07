@@ -1,0 +1,6 @@
+
+		application.properites file
+spring.profiles.active=dev
+
+		VM argument:
+-Dspring.profiles.active=dev

@@ -1,0 +1,51 @@
+1. One to One 
+
+Uni-Directional:
+
+@OneToOne -> foreing on the table. | No Extra table
+
+
+Bi-Directional:
+@OneToOne <-> @OneToOne(mappedBy = "other side property name")
+
+Extra field will be created on the other side of mappedBy
+
+
+2.a. OneToMany <-> ManyToOne
+
+Uni-Directional:
+
+	1. New table will be created
+
+Bi-Directional:
+@OneToMany(mappedBy="other side property name) <-> @ManyToOne() | @JoinColumn 
+
+1. Cascade.ALL
+	1. If no value for primary key, new entry in the table will be created.
+	2. If value to the primary key, update operation will be performed.
+
+2. OrphanRemoval = "true"
+	1. will remove the unreferenced child for bi-directional relationship
+
+3. With out Cascade
+	1. Primary key should be provided.
+	2. It take the reference from the other table.
+
+2.b. ManyToOne
+
+Uni-Directional:
+	Extra field will be created
+
+Bi-Directional:
+	Extra field will be created.
+
+3. ManyToMany
+
+Uni-Directional:
+	Extra table will be created.
+
+Bi-Directional:
+@ManyToMany <-> @ManyToMany(mappedBy="field name otherside")
+
+3 tables will be created
+ 

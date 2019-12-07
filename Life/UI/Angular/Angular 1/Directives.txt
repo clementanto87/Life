@@ -1,0 +1,21 @@
+
+There are different directives:
+
+	Define:
+1. ng-app -> provide name to the modual
+2. ng-controller -> controller name
+
+	
+	Bind:
+3. ng-model -> bind the model and view object | it is defined in the input,textarea and select tags.
+4. ng-bind -> it is same as binding expression | to display the value in the html tags like <p>,<span> etc.
+5. ng-init -> to assign the value to the variable
+6. ng-repete -> to loop through the array of object elements.
+7. ng-src -> to represent the image src location.
+
+	Events:
+
+8. ng-click
+ 
+
+

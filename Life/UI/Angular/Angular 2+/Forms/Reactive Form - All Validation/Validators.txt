@@ -1,0 +1,28 @@
+import { AbstractControl, ValidationErrors } from "@angular/forms";
+import { Observable } from "rxjs";
+
+export class UsernameValidator {
+  static cannotContainSpace(control: AbstractControl): ValidationErrors | null {
+    if ((control.value as string).indexOf(" ") != -1) {
+      return {
+        cannotContainSpace: true
+      };
+    }
+    return null;
+  }
+
+  static shouldbeUnique(
+    control: AbstractControl
+  ): Promise<ValidationErrors | null> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Async Operation");
+        if ((control.value as string) === "clement") {
+          resolve({
+            shouldbeUnique: true
+          });
+        } else resolve(null);
+      }, 2000);
+    });
+  }
+}

@@ -1,0 +1,14 @@
+Garbage Collection:
+	Its the process of removing un-referenced object from the memory.
+
+We can make object available for garbage collectiob by?
+
+	1. Assigning the null to the reference variable Ex: String name = null;
+	2. Assigning reference to another variable 
+	3. By Anonymous Object Ex: new Object(); | Next line it will be garbage collected
+
+
+Methods:
+
+1. Finalize()
+2. gc()

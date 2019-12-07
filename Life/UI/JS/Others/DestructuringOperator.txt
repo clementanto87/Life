@@ -1,0 +1,26 @@
+Approach 1: 
+let person = {
+  name: "alex",
+  age: 12
+};
+
+
+let nameArray = ({ name, age }) => {
+  console.log(name, age);
+};
+
+nameArray(person);
+
+
+Approach 2: Object destructure
+const { id, name } = person;
+console.log(id, name);
+
+Arrproach 3: Array destructure
+let names = ["alex", "anto", "anne"];
+
+let [name1, name2] = names;
+
+console.log(name1, name2);
+
+

@@ -1,0 +1,6 @@
+1. Insert();
+2. delete(); | deleteCharAt(); 
+3. append();
+4. setCharAt();
+5. reverse();
+6. capacity()

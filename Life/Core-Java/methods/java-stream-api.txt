@@ -1,0 +1,25 @@
+Java Stream:
+
+	a. Intermediate method: 7 Methods
+		1. filter(); -> to filter the data based on the condition.
+		2. map(); -> extract variable from the object or do some numeric operations.
+		3. flatMap(); -> get the stream of strings from the list of stream of string.
+		4. peek(); -> to display the intermediate state of the data.
+		5. distinct(); -> to get only distinct value from the list.
+		6. skip(); -> skip the n number of value for the list.
+		7. limit(); -> set the limit for the list.
+		8. Sorted(); -> for sorting the elements.
+
+	b. Terminal method or commands:
+		1. forEach();
+		2. findfirst();
+		3. count();
+		4. collect();
+		5. findAny();
+		6. min();
+		7. max();
+		8. anyMatch();
+		9. allMatch();
+		10. noneMatch();
+		11. forEachOrdered();
+		12. reduce();

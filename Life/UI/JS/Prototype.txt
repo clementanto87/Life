@@ -1,0 +1,32 @@
+Prototype: Javascript is a prototypic language.
+
+If we expand any object we can see __proto__ that has cyclic reference of the object itself.
+
+1. if we want to share the common function / method / behaviour / variables to different objects we go for prototyping.
+
+
+2. To define or map a function and variable to the object.
+
+Example:
+	1. Use the object NAME not the instance value 
+		let name = 'alex';
+		String.prototype.upper = function() {
+		  return this.toUpperCase();
+		}
+			console.log(name.upper());
+
+	2. Using constructor function,
+
+		function Person(id, name) {
+		  this.id = id;
+		  this.name = name;
+		}
+
+
+		Person.prototype.too = function() {
+		  return `${this.id} : {this.name}`;
+		}
+
+		Person.prototype.age = 20;
+
+		console.log(new Person(1, 'alex'));

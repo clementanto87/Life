@@ -1,0 +1,19 @@
+Active Voice:
+
+Form: Subject + Verb + Object => Action perform by the subject and received by Object.
+
+Passive Voice:
+
+Form: Object + helper verb + Verb(V3) + Subject
+
+Tense 				Active 				Passive
+Present Simple			Write / Writes 			am/is/are Written
+Present Continuous		am/is/are writting		am/is/are being Written
+Present Perfect			have written			have been Written
+
+Past Simple			Wrote				was/were Written
+Past Continuous			was/were Writting		was/were being Written
+Past Perfect			had Written			had been Written
+
+Future Simple			will write			will be written
+Future Perfect			will have write			will have been witten

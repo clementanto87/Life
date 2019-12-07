@@ -1,0 +1,5 @@
+
+1. Easy to evolve -> Before java 8 it imposible to have method implementation in the interface
+
+		If we want to make user of interface method implementation we can use it or we can have our own implementation in the child class.
+

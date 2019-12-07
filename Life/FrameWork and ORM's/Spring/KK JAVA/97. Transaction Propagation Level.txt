@@ -1,0 +1,6 @@
+
+
+Levels of propagation:
+
+1. Requires -> If inner transaction failes with the propagation level of requires outer transaction also fails
+2. Requires_new -> Inner and outer are independent to each other | if inner fails it will not affect the outer transaction

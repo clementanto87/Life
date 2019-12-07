@@ -1,0 +1,24 @@
+Prototype Inheritance: emp.__proto__ = pEmp;
+
+
+function Emp(id, name) {
+  this.id = id;
+  this.name = name;
+  
+  this.toString = function (){
+    return `${this.id} : ${this.name}`;
+  }
+}
+
+function PEmp(salary) {
+  this.salary = salary;
+}
+
+let emp = new Emp(1, 'alex');
+let pEmp = new PEmp(2000);
+emp.__proto__ = pEmp;
+
+
+console.log(emp.salary);
+
+

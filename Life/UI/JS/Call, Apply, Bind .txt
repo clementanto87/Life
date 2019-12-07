@@ -1,0 +1,33 @@
+Bind the object to the function:
+Call: 
+var count = {first: 10};
+
+var sum = function(a,b,c) {
+  return this.first + a + b + c;
+}
+
+let data = sum.call(count, 1,2,3);
+console.log(data, 'data');
+
+Apply: 
+
+var count = {first: 10};
+
+var sum = function(a,b,c) {
+  return this.first + a + b + c;
+}
+
+let ar = [1,2,3];
+let data = sum.apply(count, ar); // We can pass the array reference
+console.log(data, 'data');
+
+Bind: 
+
+var count = {first: 10};
+
+var sum = function(a,b,c) {
+  return this.first + a + b + c;
+}
+let ar = [1,2,3];
+let data = sum.bind(count);
+console.dir(data(1,2,3), 'data');

@@ -1,0 +1,31 @@
+
+1. Diamond Problem: compiler will force to have provide implementation of the method in the child class.
+
+		interface MyInterface1{
+			public long getAccountNumber();
+		}
+
+		interface MyInterface2{
+			public long getAccountNumber();
+		}
+		class MyClass implements MyInterface1,MyInterface2
+		{
+			//Comipler will force to provice implementation here in the child class also
+
+			public long getAccountNumber(){
+				return 1543137234531354;
+			}
+
+			MyClass cls = new MyClass();
+			cls.getAccountNumber();
+		}
+
+2. If class and interface has same method -> method of the class will be give preference 
+
+3. We can't provide implementation of system defined method in the default interface
+
+4. For the multilevel inheritance of the same method inside the interface; child method will be called.
+
+5. How to call the method inside in the interface if 2 interface have same methods?
+
+					MyInterface.super().getAccountNumber()

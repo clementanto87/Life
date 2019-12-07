@@ -1,0 +1,8 @@
+Events:
+(click)=function();
+
+
+Get a value of the input tags:
+
+#somename for the tag
+

@@ -1,0 +1,43 @@
+Collection:
+
+										Iteratable
+											|
+											|
+										Collection
+											|
+											|
+							List			Queue					Set
+
+							1. ArrayList	1. PriorityQueue			1. HashSet
+							2. LinkedList								2. LinkedHashSet
+							3. Vector		Deque						Sorted Set:
+							4. Stack		2. ArrayDeque				3. TreeSet
+
+LIST
+_____
+1. ArrayList:
+		1. same order
+		2. index access -> get(index)
+		3. duplicate allowed
+		4. insert with index -> set(index, value) or add(index,value)
+
+When to user?
+		More iternation | less deletion and insertion
+
+2. LinkedList:
+		1. Same order
+		2. index access 
+		3. Allowed duplicate
+		4. insert with index
+
+when to user?
+		More deletion and insertion | less iternation
+
+3. Vector: Same as array list but it is thread safe
+
+SET:
+_____
+
+1. HashSet:
+		1. not same order
+		2. No - duplicate 

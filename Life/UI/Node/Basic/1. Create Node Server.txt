@@ -1,0 +1,9 @@
+const http = require("http");
+
+http
+  .createServer((req, res) => {
+    res.end("Hello Node Js..");
+    console.log("server started..");
+    console.log(req);
+  })
+  .listen(4000);

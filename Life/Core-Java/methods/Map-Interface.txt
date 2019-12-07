@@ -1,0 +1,20 @@
+Map-Interface: 12 -> methods
+
+1. put(key,value);
+2. get(key);
+3. remove(key);
+
+3. containsKey(key);
+4. containsValue(value);
+
+5. isEmpty();
+6. size();
+7. clear();
+
+8. entrySet();
+9. keySet();
+10.values();
+
+Entry class Objects Method's:
+11. getKey();
+12 . getValue();

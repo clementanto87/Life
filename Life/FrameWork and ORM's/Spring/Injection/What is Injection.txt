@@ -1,0 +1,25 @@
+Injection:
+
+There are 2 types of injection in spring.
+
+	1. Setter,
+	2. Constructor
+
+
+1. Setter:
+		With the help of setter method.
+
+		Syntex:
+			<bean id=# class=#>
+				<property name=# value=#></property>
+			</bean>
+
+2. Constrructor;
+		with the help of constructor
+
+		Syntex:
+			<bean id=# class=#>
+				<constructor-arg index=# type=#></constructor-arg>
+			</bean>
+Note:
+	If index or type is not mentioned -> it will map for the order of the parameter in the constructor

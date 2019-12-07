@@ -1,0 +1,74 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+
+import org.omg.Messaging.SyncScopeHelper;
+
+public class Play<V> {
+
+	int count;
+
+	public static void main(String[] args) {
+
+		ExecutorService e = Executors.newFixedThreadPool(3);
+		
+		
+		Runnable r1 = () -> {
+			
+			System.out.println(Thread.currentThread().getName());
+			System.out.println("My Task1 started");
+			
+			try {
+				TimeUnit.SECONDS.sleep(2);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			System.out.println("My Task1 ends");
+		};
+		
+		
+		Runnable r2 = () -> {
+			
+			System.out.println(Thread.currentThread().getName());
+			System.out.println("My Task2 started");
+			
+			try {
+				TimeUnit.SECONDS.sleep(2);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			System.out.println("My Task2 ends");
+		};
+		
+		Runnable r3 = () -> {
+			
+			System.out.println(Thread.currentThread().getName());
+			System.out.println("My Task3 started");
+			
+			try {
+				TimeUnit.SECONDS.sleep(2);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			System.out.println("My Task3 ends");
+		};
+
+		e.submit(r1);
+		e.submit(r2);
+		e.submit(r3);
+
+		e.shutdown();
+		
+	
+
+	}
+
+}

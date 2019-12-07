@@ -1,0 +1,14 @@
+
+XML in Spring Boot:
+
+@ImportResource("classpath:beans.xml")
+
+
+@SpringBootApplication
+@ImportResource("classpath:beans.xml")
+public class SpringBootXmlConfigApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootXmlConfigApplication.class, args);
+	}
+}

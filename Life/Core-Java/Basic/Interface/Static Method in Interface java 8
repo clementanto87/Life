@@ -1,0 +1,24 @@
+Static Method:
+
+interface MyInterface{
+	
+	public static long getAccountNumber(){
+
+			return 46544545646456;
+	}
+}
+
+
+class Myclass implements MyInterface {
+	
+	long accountNumber = MyInterface.getAccountNumber();
+
+}
+
+
+1. How we have to calls it?
+			MyInterface.MyStaticMethod();
+
+
+2. Static method inside interface can't be inheritated? yes 
+

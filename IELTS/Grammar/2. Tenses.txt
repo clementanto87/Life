@@ -1,0 +1,118 @@
+Tenses:
+
+3 Time 
+
+1. Past
+2. Present
+3. Future
+
+
+4 Phases:
+
+1. Simple
+2. Continuous
+3. Perfect
+4. Perfect Continuous
+				***********PRESENT**************
+
+1. Present Simple:
+	Form: Subject + Verb
+	I / You / We / They -> NO "S" in the verb
+	He / She / It -> include "S"	
+
+	1. Habit or Routine,
+		Ex: I drink coffee every day.
+	2. Facts
+		Ex: Alex works as a doctor.
+		Water boils at 100 C.
+
+2. Present Continuous: (Action happening now, When time of speaking)
+	Form: Subject + am / is / are + verb(ing)
+	
+	I ---- AM
+	He / She / It ---- is
+	You / We / They ---- are
+
+Ex: Action happening right now
+	1. I am drinking coffee right now.
+	2. We are having breakfast.
+	3. Its raining outside. 
+
+Ex: Temporary Activities:
+	1. Arun is learning to play cricket.
+
+Ex: Changes happening now
+	1. Price of apple is falling rapidly.
+
+3. Present Perfect Tense: Without any specific time frame.
+	Form: Subject + have / has (V3 -> past participle)
+	I / You / We / They ---> have
+	He / She / It ---> has
+
+Ex: Expriences or on going activities: Time frame is not ended.
+	1. I have visited chennai four times.
+Ex: Recent Action or Event:
+	1. I have finished my homework.
+
+4. Present Perfect Continuous Tense: (amount of time || duration of time)
+	Form : have / has been + verb(+ing)
+	Ex:
+	1. I have been waiting to see the doctor for 2 hours.
+	2. I have been waiting to see the doctor from 5 AM.
+
+#####################################################################################################
+
+					***********PAST**********
+1. Past Simple: Completed action in the past
+	Form: subject + past verb(v2)
+
+Ex: 
+	1. I played football with my friends last sunday.
+
+2. Past Continuous: On going in-complete action in the past + Finished action
+	Ex: I was eating dinner when Mark came to my home.
+	I / He / She / It ---> was
+	You / We / They ---> were
+
+3. Past Perfect:
+	Form: Subject + had + Verb(part participle V3)
+
+Ex: Two or more past actions -> It shows which action has happened first.
+	1. I was sick, since I had eaten too much ice cream.
+
+4. Past Perfect continuous tense: [ continuous action in the past + followed by the finished action]
+	Ex: I felt really tired, Since I was driving all day.
+
+##############################################################################################################
+
+				**** Future Tense ****
+1. Future Simple:
+	3 Thing in Mind:
+		1. Going to
+		2. Present Continuous (making arrangement)
+		3. Will
+	A. Going to: (plans)
+	Form: Subject + am / is / are going to + verb (base)
+		Ex: We are planning to by a car.
+	Form: Subject + am / is / are + verb(ing)
+		Ex: I am having lunch with my parent on saturday.
+
+	B. Will (instance decision, promise or offer)
+	Form: Subject + will + verb (base)
+		Ex: I will help you with this.
+	C. Making Prediction: Will and going to
+		Ex: I think spain will win 2018 world cup.
+
+2. Future continuous: Activity which is going to start in the future and continue
+		Form: Subject + will be + verb (ing).
+			Ex: I will be going to france tomorrow.
+
+3. Future Perfect:
+	Form: Subject + will have + verb (past participle V3)
+		Ex: By April, Mary will have saved 100Rs.
+4. Future Perfect Continuous:
+	Form: Subject + will have been + verb (ing)
+		Ex: By April, Mary will have been saving money for six month.
+	
+
+

@@ -1,0 +1,18 @@
+
+Why Spring Boot?
+
+	Since there is some disadvantage in the spring legacy project. Spring boot came into the picture.
+
+1. Convention over Configuration:
+		Spring boot removed all the xml based configuration and provided annotation based configuration.
+
+2. Help to develope microservice application
+
+3. Default Server for development -> Like tomcat and jetty
+
+4. Cloud Support
+
+5. Support for 3rd party libarary
+
+
+** Spring boot = spring - xml configuration + server 

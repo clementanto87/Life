@@ -1,0 +1,36 @@
+Methods:
+
+1. length
+
+2. indexOf()
+3. lastIndexOf()
+
+4. search()
+
+5. slice(s,e)
+6. substring(s,e)
+7. substr(s,length)
+
+8. replace(old,new) = replace(/old/i, new) -> case insensetive = replace(/old/g, new) -> replace all
+
+9. toUpperCase()
+10. toLowerCase()
+
+11. concat("","")
+
+12. trim
+
+13. charAt(index)
+14. charCodeAt
+
+15. split("")
+
+
+c > concat, charAt
+e > endsWith 
+i > indexOf, includes
+l > length, lastIndexOf
+m > match
+r > replace, repeat
+s > search, split, substring, substr, startsWith
+t > toLowerCase, toUpperCase, trim

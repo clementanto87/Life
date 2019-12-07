@@ -1,0 +1,66 @@
+
+Step by Step:
+
+1. configurtion Server
+2. Eureka Server
+3. Producer Service Instance -> Properties to create multiple instance
+4. Consumer Service Instance -> To choose instance with load balance IF NOT choose the instance with discovery client -> hystrix to handel the exception
+
+
+
+1. eureka-server
+	dependency -> eureka-server
+	annotation -> @EnableEurekaServer
+	application.properties -> eureka.client.serviceUrl.defaultZone = http://localhost:5000/eureka
+							-> server.port=
+							eureka.client.register-with-eureka=false
+							eureka.client.fetch-registry=false
+							logging.level.com.netflix.eureka=OFF
+							logging.level.com.netflix.discovery=OFF
+
+2. student-producer
+	dependency -> eureka-client
+	annotation ->@EnableDiscoveryClient
+	application.properties -> enreka.client.serviceUrl.defaultZone = 
+		spring.application.name -> app name for eureka server
+		server.port=
+	Create multiple Instance of the service:
+		application.properties -> eureka.instance.instance-id=${spring.application.name}:${random.value}
+		
+
+3. student-consumer
+	dependency -> eureka-client
+	annotation -> not must
+	autowire -> DiscoverClient -> single instance of the service | LoadBalancerClient -> for the multiple instance of the service
+
+	Discovery Client:
+		List<ServiceInstance> instancesById = discoveryClient.getInstances("EUREKA-PRODUCER");
+		ServiceInstance instanceInfo = instancesById.get(0);
+		String homePageUrl = instanceInfo.getUri().toString();
+
+	LoadBalancerClient:
+		ServiceInstance choose = loadBalancerClient.choose("EUREKA-PRODUCER");	
+		
+	application.properties -> eureka.client.serviceUrl.defaultZone  = 
+		server.port=
+		spring.application.name -> app name for eureka server
+	Fallback and circute breaker:
+		dependeny ->hystix 
+		annotation ->@EnableCiructeBreaker
+		contoller -> @HystixCommand(fallbackMethod="name of the method")
+
+
+4. eureka-config-server
+	dependency -> eureka-config
+	annotation -> @EnableConfigServer
+	application.properties -> native properties | GITHUB properties
+		
+		
+5. Zuul:
+
+zuul.routes.student-service.path=/student-api/**   By Path
+zuul.routes.student-service.serviceId=STUDENT-SERVICE  By Service Id
+zuul.routes.producer.url=http://localhost:8080   By url
+
+
+https://springbootdev.com/2018/02/03/microservices-declare-zuul-routes-with-eureka-serviceid-spring-cloud-zuul-eureka/

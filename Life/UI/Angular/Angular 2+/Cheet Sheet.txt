@@ -1,0 +1,96 @@
+Directives:
+1. *ngIf="a>2;then dothis else dothat"
+	<ng-template #dothis>Do this</ng-template>
+	<ng-template #dothat>Do that</ng-template>
+2. *ngFor="let name of names;let i = index"
+*ngFor="let item of items; even as isEven" 
+
+3. [hidden] = "true"
+
+4. [ngSwitch] ="data"
+	*ngSwitchCase="data"
+	*ngSwitchDefault="data"
+
+5. [ngClass] = "{'btn': true, 'btn-primary': false}"
+6. [ngStyle] = "{'font-sixe.px': 20}"
+Template Form:
+1.<form #form="ngForm">
+2.<input ngModel name="username" #user="ngModel">
+3.<div ngModelGroup="name of the group">
+
+Rective Form:
+1. <form [formGroup] = "form">
+2. <input formControlName="">
+3. <div formArrayName="">
+4. <div formArrayName="" *ngFor="let name of formName.get('names').controls;let i = index">
+	a. Array of formcontrol
+		<input formControlName="{{ i }}">
+	b. Array of formgroup
+		<div [formGroupName] = "i">
+		<input formControlName="">
+
+
+Form Construction:
+1. form;
+	ngOnInit() {
+		this.form = new FormGroup({
+		username: new FormControl("default value","sync validation array","async validation array")
+		address: new FormGroup({
+		street: new FormControl(),
+		city: new FormControle()
+		})
+		})
+Form Builder:
+	form;
+	constructor(private fb: FormBuilder)
+	{
+		this.form = this.fb.group({
+			username: ["default value","sync validation array","async valildation array"]
+			address: this.fb.array([
+			[
+			 // this represents form control inside for array
+			]
+			this.fb.group({
+				this represents form group inside for array
+			})
+			])
+		})
+	}
+
+Form Validation:
+	A. Template Driven Form:
+		<input name="username" ngModel #username="ngModel">
+		<div *ngIf="username.touched && username.invalid">
+			<span *ngIf="username.errors.required">
+			UserName is required
+			</span>
+			<span *ngIf="username.errors.maxlength">
+			Max length should be 10
+			</span>
+		</div>		
+
+	B. Reactive form or data driven form
+		form = this.fb.group({
+			username: ["",Validators.required],
+			password: []
+			address: this.fb.group({
+			city: ["",Validators.required]
+			})
+		})
+
+		get userName() {
+			return this.form.get('username');
+		}
+
+		get city() {
+			return this.form.get('address.city');
+		}
+
+		<input formControlName="username">
+		<div *ngIf="userName.touched && userName.invalid">
+			<div *ngIf="userName.errors.required">User Name is required</div>
+		</div>
+		<div *ngIf="city.touched && city.invalid">
+			<div *ngIf="city.errors.required">City is required</div>
+		</div>
+

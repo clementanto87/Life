@@ -1,0 +1,10 @@
+Acccess Collection: 
+
+
+1. Get the element from the specific place in the list:
+
+<bean>
+	<property name="getTheValueFromSpecificIndex" value="#{listBeanName[indexPosition]}" />
+	<property name="getListOfallTheStudnetsMarkIsLessThan40" value="#{listNameBean.?[propertyName lt 40]}" />
+	<property name="getListOfallTheUserName" value="#{listNameBean.![propertyName]}" />
+</bean>

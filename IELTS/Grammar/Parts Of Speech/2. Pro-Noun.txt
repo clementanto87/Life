@@ -1,0 +1,63 @@
+ProNoun:
+
+1. Subject -> Who(what) is the sentence is about?
+
+2. Predicate  -> Can be a verb + what subject does
+
+3. Object -> What the subject is does? Instead of performing the action they receive the action.
+
+**** Who -> Subject || What -> Object || verb + Object -> Predicate
+
+EX: Sam plays cricket regularly.
+Sam => Subject | crickt => Object | plays crricket regularly => Predicate
+
+Example:
+Sam Plays football.
+1. Who plays football? -> Sam => So sam is subject
+2. What did same play? -> football => so it became an object.
+
+			*********Pronoun*********
+1. It replaces the noun.
+	Words: I / We / You / They => S will not come
+		He / She / It => S will come
+
+Ex: Sam bought a book because Sam wanted to read. => Sam bought a book because he want to read.
+
+Type of Pronoun:
+1. Personal Pronoun
+2. Indefinite Pronoun
+3. Relative
+4. Intensive
+5. Demonstrative
+6. Interrogative
+7. Reflexive
+			********Personal Pronoun********
+1. First Person -> I / Me / Mine / My || We / Our / Ours
+2. Second -> You / Yours 
+3. Third ->  He / She / It / her / him  || They / Them / Their / Theirs
+
+
+2. Indefinite Pronoun:
+	Words: anybody, anyone, nobody, every, all, some, enough, many, much 
+Ex: Somebody ate my cake || Every on knows she is beautiful.
+
+3. Relative Pronoun:
+	noun which are mentioned previously.
+	Words: Who, Whom, Which, Whomsoever, whose, that
+Ex: The Runner who won the race trained hard.
+
+4. Intesive:
+	Emphasize the noun or pronoun.
+	himself, herself, yourself, themself, ourself
+
+5. Demonstrative 
+	Words: These, that, those, such
+
+6. Interrogative:
+	Use to ask a question
+	Words: What, which, who, whom
+
+7. Reflexive
+	When subject and object are same -> this is used
+	Words: Words end with self.
+

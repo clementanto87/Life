@@ -1,0 +1,14 @@
+
+Completed:
+
+1. How to create tree, recuresion and non-recursion approach? 2 program
+2. Travel the tree, recursion and non-recursion approach? 2 program
+
+3. Find the height of the tree?
+4. Find the tree is BST or not?
+
+
+To-Do:
+
+1. Delete the nodes in the tree?
+2. Traverse the tree base on the condition?

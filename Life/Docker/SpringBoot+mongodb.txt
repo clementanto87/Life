@@ -1,0 +1,14 @@
+Step 1: Create a private network
+docker network create spring_demo_net
+
+Step 2: start the mongo instance or create a mongo database container
+docker run --name mongodata --network=spring_demo_net -v /home/ubuntu/mongo-data:/data/db -d mongo:latest
+
+docker run --name mongodata -d mongo:latest
+
+Step 3: Create a database with VMI editor or command line terminal for DDL and DML
+docker run -it --link mongodata:mongo --network=spring_demo_net --rm mongo mongo --host mongo test
+
+Step 4: Run the spring boot image with the correct network
+docker run -d --name myproject --network=spring_demo_net -p 8080:8080 myproject
+

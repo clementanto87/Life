@@ -1,0 +1,60 @@
+FORM:
+
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <!-- step 2: create form control name and set property value matching one in ts -->
+        <input 
+            formControlName="username"
+            id="username" 
+            type="text" 
+            class="form-control">
+        <!-- step 3: perform validation -->
+       <div *ngIf="username.touched && username.invalid"  class="alert alert-danger">
+           <div *ngIf="username.errors.required" >User name is required</div>
+           <div *ngIf="username.errors.minlength" >User name is too small must be 3 character</div>
+           <div *ngIf="username.errors.cannotContainSpace" >User name can not contain space</div>
+       </div>     
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+            formControlName="password"
+            id="password" 
+            type="text" 
+            class="form-control">
+    </div>
+    <button class="btn btn-primary" type="submit">Sign Up</button>
+</form>
+
+
+TYPESCRIPT:
+
+ // Step 1: create a Form Group object with Form Control properties
+  form = new FormGroup({
+    'username': new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      usernameValidators.cannotContainSpace
+    ]),
+    'password': new FormControl('', Validators.required)
+  });
+
+  // step 2: to get the user name property in html for validation 
+  get username() {
+    return this.form.get('username');
+  }
+
+
+CUSTOME VALIDATION CLASS:
+
+import { AbstractControl, ValidationErrors } from "@angular/forms";
+
+export class usernameValidators {
+    static cannotContainSpace(control: AbstractControl): ValidationErrors | null {
+        if ((control.value as string).indexOf(' ') >= 0) {
+            return { cannotContainSpace: true };
+        }
+        return null;
+    }
+}

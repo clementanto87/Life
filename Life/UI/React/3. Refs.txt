@@ -1,0 +1,14 @@
+A. Un-Controlled accessing of the html element
+B. Can get controle of child component Ex: constructor() { this.testCompRef = React.createRef()} | <Test ref={this.testCompRef}>
+
+1. Inside the constructor,
+	this.nameRef = React.createRef();
+
+2. Inside the render method,
+	<input type="text" ref={this.nameRef}>
+
+3. Inside ComponentDidMount Method,
+	this.nameRef.current.focus();
+
+4. You can get the ref of the element inside the handler method,
+ 	this.nameRef.current.value // get the value of the input

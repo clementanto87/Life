@@ -1,0 +1,16 @@
+1. Noun -> Name given to => Animal, Person, Place, Thing, Idea, Feeling
+2. Pronoun -> Word that take the place of noun => Replace the noun
+
+3. Verb -> Action (Alex plays football) / State of being (I am a teacher)
+4. Adverb -> Given information about verb, adjective and adverb. (When, where, How => on the verb and adjcetive).
+	EX: Yesterday evening => is a adverb
+
+5. Adjective -> Provide infomation about Noun / ProNoun => What? Count (how many)? question on the noun and pronoun (Articles -> a, an, then => is also an adjective).
+
+6. Preposition -> in, on, at, from, for, before, after, then, with => (Relationship with time, place and position)
+
+7. Conjuction -> and, or, since, because, so -> (Connect ideas)
+
+8. Interjection -> Wow!, Oops! 
+
+9. Determiner

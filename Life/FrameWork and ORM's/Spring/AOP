@@ -1,0 +1,61 @@
+***************************Spring AOP***************************
+
+AOP - > Aspect Oriented Programing 
+
+To address the cross cutting concerns in the application.
+
+ 	-> To seperate business logic from the other modulare operation like loggering, role base security validation, transaction, performance etc.
+
+
+ @Aspect -> annotate the class; and specify the pointcuts inside the class. 
+
+ @Before -> Method will execute before the execuation of targer method
+
+ @AfterReturning -> After execuation of target method
+
+ @AfterThrowing -> If there is exception | it runns after exception
+
+ @Around -> Will execute before and after execuation of target method
+
+	PointCuts:
+		1. execution
+		2. within
+		3. arg
+
+
+ Examples: 
+
+ 1. @Before("execution(public void getEmpDetails())")
+ 			public void allGetters(){
+		
+	}
+
+2.  @Before("within(com.create.javagame.model.Circle*)")
+ 			public void allGetters(){
+		
+	}
+
+3. @Before("args(name)")
+ 			public void allGetters(){
+		
+	}
+
+4. @Pointcut("within(com.create.javagame.model.Circle*)")
+	public void pointCutForAllCircleMethod(){
+	}
+
+5. @Pointcut("execution(* get*())")
+	public void allGetters(){
+		
+	}
+	
+6. Around:
+ 		@Around("allGetters()")
+	public void around(ProceedingJoinPoint joinPoint){
+		try {
+			joinPoint.proceed();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}

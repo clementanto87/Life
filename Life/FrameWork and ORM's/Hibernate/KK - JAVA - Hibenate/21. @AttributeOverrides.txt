@@ -1,0 +1,1 @@
+If two composite state in the class are same; then go for annotating it as attribute overrides

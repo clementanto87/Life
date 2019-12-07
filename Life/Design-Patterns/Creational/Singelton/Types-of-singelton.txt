@@ -1,0 +1,7 @@
+1. Lazy
+2. Eager
+3. Static block 
+4. Thread safe
+5. Serilizable 
+6. Enum
+7. Bill - Pugh

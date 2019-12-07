@@ -1,0 +1,24 @@
+Parent Properties (Container):
+1. display: flex;
+2. flex-wrap: wrap | no-wrap | wrap-reverse
+3. flex-direction: row | row-reverse | column | column-reverse
+
+4. flex-flow: row wrap; -> combination of flex-wrap and flex-direction.
+
+5. justify-content: flex-start | flex-end | center | space-between| space-around| space-evenly | stretch; -> Main axis (x-axis)
+6. align-items: flex-start | flex-end| center | space-between | space-around | space-evenly |stretch; -> Cross axis (y-axis)
+
+7. align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+
+Child Properties (items):
+
+1. order: 1 | 2 | 3 ... -> order in which the items should get arranged.
+
+2. flex-grow: 1 | 2 | 3 ... -> div grows relative to other div items.
+3. flex-shrink: 1 | 2 | 3 ... -> div shrinks relative to other div items.
+
+4. flex-basic: percentage-> Percentage of space the div has to occupy.
+
+5. flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+
+6. align-self: auto | flex-start | flex-end | center | baseline | stretch;

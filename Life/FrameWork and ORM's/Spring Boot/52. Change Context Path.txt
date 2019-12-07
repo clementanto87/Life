@@ -1,0 +1,30 @@
+
+By Default:
+		Context path is "/"
+
+
+1. application.properties
+
+	server.servlet.context-path=/context_path_name
+
+
+2. eclipse -> run configuration -> environment -> server_servlet_context_path = /context_path_name
+
+
+3. Programatic approach
+
+SpringApplication spa = new SpringApplication(className.class);
+Map<String,Object> map = new HashMap<>();
+map.put("serer_port",9090);
+map.put("server_context_path","/context_path_name");
+
+spa.setDefaultProperties(map);
+spa.run(args);
+
+4. Call back interface:
+** annotate the class with @component
+1. Implement below interface
+	Interface Name: EmbeddedServletContainerCustomizer
+2. set the properties in the overriddent method	
+
+

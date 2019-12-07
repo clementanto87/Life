@@ -1,0 +1,127 @@
+Directives Commands:
+
+1. ngIf -> Same like if in java
+
+	Approach 1:
+	<div class="items" *ngIf="items.length > 0">
+      	List of items
+    </div>
+    <div class="noitems" *ngIf="items.length == 0">
+      	No items
+    </div>
+
+    Approach 2:
+     
+    <div class="items" *ngIf="items.length > 0; else noitems">
+      List of items
+    </div>
+    	<ng-template class="noitems" #noitems>
+      	No items
+    	</ng-template>
+  	</div>
+
+  	Approach 3:
+  	 <div class="items" *ngIf="items.length > 0;then listofitems else noitems"></div>
+    	<ng-template #listofitems>
+      	List of items
+    	</ng-template>
+    	<ng-template class="noitems" #noitems>
+      	No items
+    	</ng-template>
+
+
+2. Hidden:
+
+	<div [hidden] = "items.length == 0">List of courses</div>
+    <div [hidden] = "items.length > 0"> No course</div>
+
+3. ng-switch
+
+<span [ngSwitch]="noitems">
+    <p *ngSwitchCase="items">
+      list of items
+    </p>
+    <p *ngSwitchCase="noitems">
+    no items
+    </p>
+    <p *ngSwitchDefault>
+    default
+    </p>
+    </span>
+
+4. *ngFor
+
+1. Approach
+	<div *ngFor="let item of items" >
+        {{ item }}
+	</div>    
+
+2. Approach (index)
+    <div *ngFor="let item of items; index as i" >
+        {{ item }} - {{ i }}
+    </div>
+3. Approach (even)
+
+    <div *ngFor="let item of items; even as isEven" >
+        {{ item }} - {{ isEven }}
+    </div>
+
+
+5. ngFor + push + remove:
+
+ <button class="btn btn-primary" (click) ="addRow()">Submit</button>
+  
+    <div *ngFor="let item of items; even as isEven" >
+        {{ item }} - {{ isEven }}  <button (click)="onRemove(item)">Remove</button>
+    </div>
+  
+  Type Script: 
+  addRow(data) {
+    this.items.push(data);
+  }
+
+  onRemove(data){
+    this.items.splice(data,1);
+  }
+
+
+6. ngClass
+
+
+7. ngStyle
+
+	<div [ngStyle]="{'background-color':'green'}"></<div>
+
+	<div [ngStyle]="{'background-color':person.country === 'UK' ? 'green' : 'red' }"></<div>	
+
+	<ul *ngFor="let person of people">
+ 		 <li [ngStyle]="{'color':getColor(person.country)}"> {{ person.name }} ({{ person.country }}) (1)
+  		</li>
+	</ul>	
+
+	Type Script:
+	getColor(country) { 
+    switch (country) {
+      case 'UK':
+        return 'green';
+      case 'USA':
+        return 'blue';
+      case 'HK':
+        return 'red';
+    }
+  }
+
+  	<ul *ngFor="let person of people">
+  		<li [ngStyle]="{'font-size.px':24}"
+      	[style.color]="getColor(person.country)">{{ person.name }} ({{ person.country }})
+  		</li>
+	</ul>
+
+  8. ngClass:
+
+  	<div [ngClass]="{
+  		'is-active': condition,
+  		'is-inactive': !condition,
+  		'is-focused': condition && anotherCondition,
+		}">
+	</div>		

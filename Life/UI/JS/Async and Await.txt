@@ -1,0 +1,17 @@
+Async and Await:
+This is to work with the promise. to get the promise data inside the function 
+1. use async keyword in the method level.
+2. await when calling the promise method.
+
+function test() {
+  return new Promise((resolve, reject) => {
+    resolve('test success');
+  })
+}
+
+let main = async () => {
+  let value = await test();
+  console.log(value);
+}
+
+main();

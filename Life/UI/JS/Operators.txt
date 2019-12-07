@@ -1,0 +1,53 @@
+Arithmetic Operators (8)
+
+1. +
+2. -
+3. *
+4. /
+
+5. ++
+6. --
+
+7. %
+
+8. ** Exponentiation
+
+Assignment Operators (7) [x += y	x = x + y]
+
+1. =
+
+2. +=
+3. -=
+4. *=
+5. /=
+
+6. %=
+7. **= 
+
+
+Comparison Operators (9)
+1. ==
+2. ===
+
+3. !=
+4. !==
+
+5. >
+6. <
+
+7. >=
+8. <=
+
+9. ?
+
+Logical Operators (3)
+
+1. &&
+2. ||
+3. !
+
+
+Type Operators(2)
+
+1. typeOf
+2. instanceOf

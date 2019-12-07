@@ -1,0 +1,6 @@
+
+
+@Qualifier:
+
+	more than one bean of same type is present; to avoid confusion go for @Qualifier annotation with @Autowire annotation.
+

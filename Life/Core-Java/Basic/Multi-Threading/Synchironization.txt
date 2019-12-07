@@ -1,0 +1,12 @@
+Synchironization: Intrensic lock | monitor lock | object level lock
+		Sequencial processing of the shared resource | Only one thread can access the resource at one time.
+
+1. Block Level syn -> inside the method
+2. Method level Syn -> syn on the method declaration
+3. Class level Syn -> Static syn..
+
+
+Volatile KeyWord:
+
+	thread looks for the value in the main memeory | Not in the catch
+	

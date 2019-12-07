@@ -1,0 +1,9 @@
+
+why angular js?
+
+		1. MVC -> clear seperation of model building and view generation,
+		2. Two way bonding between -> view and model
+		3. Easy to develope single page applications
+		4. Write less code and have more functionalites
+		5. Unit testable
+		6. Re-usable components

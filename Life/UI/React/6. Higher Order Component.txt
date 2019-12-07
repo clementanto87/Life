@@ -1,0 +1,5 @@
+HOC -> Higher Order Component
+
+const NewComponent = higherOrderComponent(originalComponent)
+
+Higher order function enhance the original component and returns the component.

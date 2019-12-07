@@ -1,0 +1,12 @@
+Some use full methods:
+
+Math.abs - positive number
+Math.ceil(4.7) - upper bound make it to 5
+Math.floor(2.7) - lower bound make it to 2
+Math.exp(2,2) - 4 exponential
+Math.min
+Math.max
+Math.pow
+Math.randow
+Math.round
+ 

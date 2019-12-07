@@ -1,0 +1,28 @@
+Commands:
+
+0. Install angular:
+	Install Node.js and Npm
+	1. ng intall -g @angular/cli
+
+1. To Create Project Structure
+    ng new Angular6Project --skip-test 
+
+2. To Run the Project
+	-> Go to project folder root
+	1. ng server --open
+	2. ng s -o (shortcut to run the project)
+
+3. npm command to install bootstrap
+	npm install bootstrap@3 jquery --save
+
+4. Create new components
+	ng g c employee/create-employee --spec=false --flat=true
+
+5. Create a module
+	ng g m app-routing --flat=true --module=app
+
+6. Create class
+	ng g class className 
+
+7. Create a service
+	ng g service nameoftheFolder/nameoftheservice

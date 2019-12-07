@@ -1,0 +1,5 @@
+Access Modifier:
+1. Public -> Can be access from every where
+2. protected -> inside package + outside package only by extending or inheritance
+3. default -> Only inside package
+4. private -> only inside class

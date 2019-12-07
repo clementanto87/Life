@@ -1,0 +1,20 @@
+Uni-Direction:
+
+1. OneToOne -> 2 table (FK same side table)
+
+2. OneToMany -> 3 table 
+3. OneToMany @JoinColumn(name="", referencedColumnName="") -> 2 table (FK on otherside)
+
+4. ManyToOne -> 2 table (FK same side)
+
+5. ManyToMany -> 3 table
+
+Bi-Directional:
+
+1. OneToOne(mappedBy="", cascade=Cascade.Type.ALL) -> 2 table (FK other side of mappedBy)
+
+2. OneToMany() <-> ManyToOne() -> 3 table
+3. OneToMany(mappedBy="") <-> ManyToOne() -> 2 table (FK other side of mappedBy | on the many side)
+
+4. ManyToMany() <-> ManyToMany() -> 4 table
+5. ManyToMany(mappedBy="") <-> ManyToMany() -> 3 table(mappped by side will not create table)

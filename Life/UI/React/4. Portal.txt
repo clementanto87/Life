@@ -1,0 +1,14 @@
+1. All the component in react gets render in root <div> of index.html
+2. But by using portal, we can render the component in different html element.
+
+Steps:
+1. Create a extra div in index.html file
+	<div id="test"></div>
+
+2. create functional component which returns the new portal (1 arg is string, num, JSX, Component | 2nd arg is html element itself)
+
+	function PortalDemo() {
+		return ReactDOM.createPortal(string | number | JSX | Components, document.getElementById('test'))
+	}
+
+3. In App.js, include the PortalDemo Compoent

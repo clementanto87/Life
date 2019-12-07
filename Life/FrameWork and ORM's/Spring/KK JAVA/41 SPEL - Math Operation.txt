@@ -1,0 +1,8 @@
+
+Math Operation - Spring Expression Language:
+
+Syntex:
+
+<bean>
+	<property name="" value="#{2*(beanName.property+beanName.property)}" />
+</bean>

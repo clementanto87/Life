@@ -1,0 +1,14 @@
+
+
+To insert both the parent and child information 
+
+We have to mention -> @OnetoOne(Casecade=CasecadeType.ALL)
+
+types:
+
+ALL,
+MERGER,
+DETACH,
+REFRESH,
+PRESIST, -> when we save the object we should user persist method for saving | save method will not work
+REMOVE -> when parent is removed child will not be removed 

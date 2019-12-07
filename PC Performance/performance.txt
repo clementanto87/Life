@@ -1,0 +1,12 @@
+1. Defrag in window
+2. %temp% in run
+3. temp in run
+4. prefetch in run
+
+5. Right click on c drive and properties and disk cleanup
+
+6. msconfig in run -> hide all service
+
+7. regedit in run
+
+8. Go to Environment setting

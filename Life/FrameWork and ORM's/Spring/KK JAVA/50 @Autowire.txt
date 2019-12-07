@@ -1,0 +1,19 @@
+
+@AutoWire
+
+	on properties, setter method , not setter method and constructor
+
+By default autowire is TRUE
+
+@AutoWire(required=false) -> even if the injection instance is not available it will not throw error.
+
+
+How spring search?
+
+	Step 1: try to resolve by autowire by name 
+	
+				if not available 
+
+	Step 2: try by autowire by type
+
+	

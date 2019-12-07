@@ -1,0 +1,11 @@
+Generate Function:
+	To pause and start the execuation of the function.
+
+function* gen() {
+yield 3;
+yield 4;
+}
+
+let g = gen();
+
+g.next() // {value: 3, done: false}

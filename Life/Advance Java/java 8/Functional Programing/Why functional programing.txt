@@ -1,0 +1,6 @@
+
+Why functional programing?
+	
+	1. To work on the stream of data's
+	2. To make use of multi-core of the latest system.
+	3. To avoid sync...tion problem

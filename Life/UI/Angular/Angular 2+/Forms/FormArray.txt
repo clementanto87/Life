@@ -1,0 +1,150 @@
+HTML:
+
+Approach 1: 
+
+<form action="">
+    Input:
+
+    <!-- input filed to pass the text valule  -->
+    <input type="text" #topic class="form-control" (keyup.enter)="addTopic(topic)">
+
+    <!-- li to display the formcontrol object and remove when click the text displayed in the screen -->
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let topic of form.get('topics').controls" (click)="removeTopic(topic)" > {{ topic.value }}</li>
+      </ul>
+
+</form>
+
+
+Type Script:
+
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+
+//step 1: create ta form group object and inside that create formarray
+  form = new FormGroup({
+    topics: new FormArray([])
+  });
+
+  // Step 2: we cant push the HTMLInputElement directly into topic so convert FormArray
+  get topics() {
+    return this.form.get('topics') as FormArray;
+  }
+
+  // Step 3: pust the FormControl object into form array
+  addTopic(topic: HTMLInputElement) {
+    this.topics.push(new FormControl(topic.value));
+    topic.value = ' ';
+  }
+
+  // Step 4: Remove the formcontrol object from the form array
+  removeTopic(topic: FormControl) {
+    let index = this.topics.controls.indexOf(topic);
+    this.topics.removeAt(index);
+  }
+
+
+
+Approach 2: 
+
+<div class="container">
+<form [formGroup]="form" (ngSubmit)="onSubmit()" >
+    Name: <input type="text" formControlName="name"><br>
+    Age: <input type="text" formControlName="age"><br>
+    <div formArrayName="contacts" *ngFor="let contact of form.get('contacts').controls; let i=index" >
+            Email: <input type="text" name="email" id="" formControlName="{{ i }}"><br>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+</div>
+
+constructor(fb: FormBuilder) {
+    this.form = fb.group({
+      name: [],
+      age: [],
+      contacts: fb.array([
+        []
+      ])
+    });
+  }
+
+
+  onSubmit() {
+    let n = this.form.get('name').value;
+    let a = this.form.get('age').value;
+    console.log(n);
+    console.log(a);
+    console.log(this.form.value);
+  }
+
+
+Approach 3: Add field dynamically
+
+TYPESCRIPT: 
+  form;
+  // form = new FormGroup({
+  //   name: new FormControl(),
+  //   age: new FormControl(),
+  //   contact: new FormGroup({
+  //     email: new FormControl(),
+  //     phone: new FormControl()
+  //   })
+  // });
+
+  constructor(fb: FormBuilder) {
+    this.form = fb.group({
+      name: [],
+      age: [],
+      contacts: fb.array([ fb.group({
+        email: [],
+        phone: []
+      })
+      ])
+    });
+  }
+
+  get contacts() {
+    return this.form.get('contacts') as FormArray;
+  }
+
+  add($event) {
+    alert('here'); 
+    $event.stopPropagation();
+    this.contacts.push(new FormGroup({
+      email: new FormControl(),
+      phone: new FormControl()
+    }));
+  }
+
+  remove(data: FormGroup){
+    let index = this.contacts.controls.indexOf(data);
+    this.contacts.removeAt(index);
+  }
+  
+  onSubmit() {
+    let n = this.form.get('name').value;
+    let a = this.form.get('age').value;
+    console.log(n);
+    console.log(a);
+    console.log(this.form.value);
+  }
+
+
+HTML:
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" >
+    Name: <input type="text" formControlName="name"><br>
+    Age: <input type="text" formControlName="age"><br>
+    
+    <div formArrayName="contacts" *ngFor="let contact of form.get('contacts').controls; let i=index" >
+        <div [formGroupName]="i">
+                Email: <input type="text" name="email" id="" formControlName="email"><br>
+                Phone: <input type="text"   name="phone" id="" formControlName="phone"><br>
+                <button class="btn btn-primary" (click)="remove(i)" >Remove</button>
+        </div>    
+    </div>
+
+    <button (click)="add($event)" class="btn btn-primary" stop-event>Add</button><br><br>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>

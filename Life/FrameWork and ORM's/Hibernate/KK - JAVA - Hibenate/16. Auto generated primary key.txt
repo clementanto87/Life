@@ -1,0 +1,9 @@
+
+Primary Key Generation:
+
+There are 4 option,
+
+1. GenerationType.AUTO -> Default strategy
+2. Indentity
+3. Sequence 
+4. Table

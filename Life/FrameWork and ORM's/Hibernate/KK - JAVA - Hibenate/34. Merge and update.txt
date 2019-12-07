@@ -1,0 +1,8 @@
+
+Merger:
+
+1. We are creating a session and get the object
+2. and we closed the session.
+3. Make a update on the state of the object.
+4. and when we call on the update, we will get excpetion.
+5. but when we call the merge method -> object state will be update in the database

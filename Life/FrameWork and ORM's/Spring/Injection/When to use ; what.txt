@@ -1,0 +1,6 @@
+
+When to use which type of injection?
+	
+	Setter: use it when to map the optional dependencies
+
+	Constructor: use it to map mandatory dependencies

@@ -1,0 +1,17 @@
+static:
+
+1. class -> inner class
+2. method -> it belongs to the class not object | Can be called using class name itself
+	
+    They can only directly call other static methods.
+    They can only directly access static data.
+    They cannot refer to this or super in any way.
+
+3. variable -> belongs to class not object | it is shared between objects | ** can be applied only on the class variable
+		
+    We can create static variables at class-level only. See here
+    static block and static variables are executed in order they are present in a program.
+
+4. static block-> initilize the static final variable
+
+

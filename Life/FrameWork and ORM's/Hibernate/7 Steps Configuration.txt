@@ -1,0 +1,14 @@
+		1. Configuration configuration = new Configuration().configure().addAnnotatedClass(Laptop.class).addAnnotatedClass(Alien.class);
+		
+		2. SessionFactory sessionFactory = configuration.buildSessionFactory();
+		
+		3. Session session = sessionFactory.openSession();
+		
+		4. Transaction transaction = session.beginTransaction();
+		
+		5. Alien a1 = (Alien)session.get(Alien.class, 1);
+
+		
+		6. transaction.commit();
+		
+		7. session.close();

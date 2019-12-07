@@ -1,0 +1,99 @@
+											Hibernate Interview Question and Answers
+1. ORM -> Object Relational Mapping
+
+2. Advantage of hibernate?
+		a. Open Source, ORM and database independent,
+		b. High Performance -> becaue of cache machanism
+		c. HQL and HCQL -> Hibernate Query Language and Hibernate criteria query language
+		d. No Expertise in SQL needed
+		e. Automatic table creation, update, saving with less code
+		f. Provide statics
+
+3. Hibernate Archi-tect-ure?
+		Java Object ----> ORM -------> Database
+		Take the java object and convert into the sql query and insert into the table.
+
+4. Components of hibernate?
+		1. Configuration
+		2. SessionFactory
+		3. Session -> non thread safe ( we can talk to the database )
+		4. Transaction
+		5. HQL 
+		6. Criteria
+
+5. hibernate.cfg.xml?
+		1. datasource information,
+		2. connection pool size,
+		3. dialect -> what database used,
+		4. cache information -> secondary caching,
+		5. show_sql,
+		6. hbm2ddl_auto -> create table automatically,
+		7. Mapping classes,
+		8. Mapping resources.
+
+6. Dialect?
+		Tell the hibernate which database, we are going to us for this application.
+
+
+7. Configure hibernate using xml?
+		1. Create POJO class,
+		2. Create hibernate.hbm.xml corrosponding to the POJO class and map the attribute,
+		3. Create hibernate.cfg.xml file,
+		4. Create Session factor,
+		5. Create session to save objects.
+
+8. Hibernate in-her-itance mapping?
+		1. Table per class hie-rar-chy, ( by default )
+		2. Table per Concrete class,
+		3. Table per sub-class.
+
+9. What is generate class in hibernate?
+		 AUTO, IDENTITY, TABLE, SEQUENCE
+
+10. What is lazy hibernate?
+		When hibenate load the data it will not load the data of composite object ; only when we explicity get the data it will load the data.
+
+		Other words -> will not fetch the data for the child class ( composite relation )
+
+11. What is HQL and advantage?
+		Hibentate Query Language. 
+				HQL independent of the database -> We are going to write the query based on the object not the table of the database.
+
+12. HCQL -> hibernate critera Query Language | add the filter 
+
+13. Named SQL query?
+			We can name and save the query so that it can be used when we needed.
+
+14. Caching in hibernate?
+		1. First level -> session level -> it by default 
+		2. Second level -> Applction leve -> have to explicitly configure it in the hibernate.cfg.xml file.
+
+15. Different state of Object?
+		1. Transient -> Object created but not linked to the session
+		2. Persistence -> session.save(Object); -> once the object is joined to the session | it will keep tracking of changes 
+		3. Detached -> once the session is closed it is detached.
+
+16. Difference between get and load?
+		get -> hit the database and get the result -> if no object -> null
+		load -> create the proxy-object -> if no object -> objectNotFoundException
+
+17. Difference between merge and update?
+		-> update is user to update the state of the object.
+		-> if the session is not available go for merger
+			
+			if there is no session ->it automatically merge the current data with the existing state
+
+18. Auto dirty checking in hibernate?
+			When the object is linked to the session, it will just keep tracking if the object is getting updated or not.
+
+19. proxy - object?
+		We every we call load method. proxy object is created and the object fetch the data from the server.
+		It will not trigger the query unless we explicity request the state of the data.
+
+20. Hibernate native SQL?
+		Normal sql to run the queries.
+
+
+
+
+

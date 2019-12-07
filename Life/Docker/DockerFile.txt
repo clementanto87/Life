@@ -1,0 +1,5 @@
+## Run the jar file
+FROM openjdk:8
+ADD <spring-jar-location> <copy-to-docker-container>
+EXPOSE <port-number>
+ENTRYPOINT ["java","-Dspring.data.mongodb.uri=mongodb://localhost/test","-jar","springboot-docker-mongodb.jar"]

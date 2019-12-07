@@ -1,0 +1,8 @@
+
+Spring Container:
+
+	1. Its a container of BEANS not the servelets
+	2. Manage life cycle -> Create, Instantiate, Initilize and destroy	
+	3. It help to achieve DI -> Dependency injection
+
+	

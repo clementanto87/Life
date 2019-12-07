@@ -1,0 +1,27 @@
+
+Theam-Leaf:
+
+Server side template engine. 
+
+user for:
+	1. form validation,
+	2. display i18n messages,
+	3. bind class fields with html elements
+
+
+How to integrate with spring boot?
+
+	1. Include theam leaf starter dependecny in pom.xml
+
+		To download latest version:
+			<properties>
+				<theamleaf.version></theamlead.version>
+				<theamleaf-layout-dialect.version></theamleaf-layout-dialect.version>
+			 </properties>
+
+
+Properties?
+
+1. spring.thymleaf.mode 
+2. spring.thymleaf.prefix
+3. spring.thymleaf.suffix

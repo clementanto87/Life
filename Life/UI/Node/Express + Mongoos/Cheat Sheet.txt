@@ -1,0 +1,70 @@
+Step 1. npm init
+Step 2. npm install express
+Step 3: npm install nodemon
+Step 4: "scripts": {
+    "start": "nodemon app.js"
+  }
+Step 5: Create app.js
+Step 6: app.get("/", (req, res) => {}) // End point
+
+Step 7: app.use("/", () => {}) // Middle ware
+
+Step 8: npm install mongoose
+
+Step 9: Router
+	1. create a different js file.
+	2. const router = express.Router()
+	3. router.get("/test", (req, res) => {
+		res.send('welcome");
+		})
+		module.exports = router;
+	4. In app.js file create a middlewear, if the path match then it will redirect to route js 
+		cosnt testRouter = require("FILE LOCATION");
+		app.use("/", testRouter);
+
+>>>>>>>>>>>>>>>>>>> In order to work with json, we have to introduce body-parser middlerware or express.json()
+			1. Body parser
+			const bodyParser = require('body-parser');
+			app.use(bodyParser.json());	
+			2. express.json()
+			app.use("/", express.json()); <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+Step 10. Create Models
+	1. Create a model js file	
+	2. const mogoose = require('mongoose');
+	3. Create Schema,
+		const Schema = mongoose.Schema;
+		const Emp = new Schema({
+		id: Number || {type: String, required: true, default: ""},
+		name: String	
+		})
+	*** module.exports = mongoose.model("NAME of the Model", EMP);
+
+
+Step 11: Import the model in router file => const Emp = require('path of model');
+
+Step 12: Save
+	router.get("/save", (req, res) => {
+		1. Create a model object with data
+			let emp = new Emp({id: 1, name: 'alex'});
+			// call a save method which returns promise
+			emp.save().then(data => {
+				res.send(data);
+			})	
+		})
+		2. We can also create,
+			Emp.create({{id: 1, name: 'alex'}})
+
+Step 13: Delete
+	1. For delete / find / update we need not need to create a model object
+	2. Rather we can make use of imported model itself.
+		Emp.remove({id: 1});
+		Emp.updateOne({ id: 300 }, { $set: { name: "Jane J" } }).then(data => {
+		    res.send(data);
+  		});
+
+Step 14: Install CORS => npm intall cors
+
+
+Step 15: Add a CORS middleware
+	app.use(cors());

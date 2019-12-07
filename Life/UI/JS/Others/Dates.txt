@@ -1,0 +1,24 @@
+var date = new Date();
+
+Get Methods:
+1. getFullYear
+2. getMonth -> starts from 0
+3. getDate
+4. getHours
+5. getMinutes
+6. getSeconds
+7. getMilliSeconds
+8. getTime
+9. getDay - 0 to 6
+
+Set Methods:
+
+1. setDate
+2. setFullYear
+3. setMonth
+4. setDate
+5. setHours
+6. setMinutes
+7. setSeconds
+8. setMilliSeconds
+9. setTime

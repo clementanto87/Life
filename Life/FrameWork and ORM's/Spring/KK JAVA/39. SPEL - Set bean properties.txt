@@ -1,0 +1,26 @@
+Spring Expression Language:
+
+Syntex:
+
+1. #{beanName.propertyName}
+2. ${beanName.propertyName}
+
+User of Expression language:
+
+1. To Map the bean property with other beans property
+2. To get the property value from the getter menthod of other bean
+
+
+	<beans:bean class="com.infotech.springexpression.model.BookLibrary" id="bookLibrary">
+		<beans:property name="allbook" value="#{bookCollection.bookList}" />
+		<beans:property name="firstBook" value="#{bookCollection.getFirstBook()}" />
+	</beans:bean>
+
+	<beans:bean class="com.infotech.springexpression.model.BookCollection" id="bookCollection">
+		<beans:property name="bookList">
+		<beans:list>
+			<beans:ref bean="book1" />
+			<beans:ref bean="book2"/>
+		</beans:list>	
+		</beans:property>
+	</beans:bean>

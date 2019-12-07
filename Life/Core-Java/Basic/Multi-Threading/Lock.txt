@@ -1,0 +1,10 @@
+
+Lock: Is the concept introduced in java 1.6.
+
+There are different types of implementations of the lock
+
+1. private Lock lock = new ReentrantLock();
+
+Advantage:
+	1. We can have read or write lock here ; so incase of read multi thread can operate on the block.
+	2. FAIR-NESS - policy -> it give priority to the thread waiting for longer duration time to get the CPU time for the execution.

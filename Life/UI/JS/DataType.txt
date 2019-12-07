@@ -1,0 +1,35 @@
+Primitive Data Type:
+
+1. Number (int, float, double)
+2. String
+3. boolean
+4. undefined
+
+Complex Data type:
+
+1. Array [1,2,3,4]
+2. Object {name: 'alex', age: 21}
+3. Null
+4. function ---> function onclick() { ... }
+
+In JavaScript there are 5 different data types that can contain values:
+
+string
+number
+boolean
+object
+function
+
+There are 6 types of objects:
+
+Object
+Date
+Array
+String
+Number
+Boolean
+
+And 2 data types that cannot contain values:
+
+null
+undefined

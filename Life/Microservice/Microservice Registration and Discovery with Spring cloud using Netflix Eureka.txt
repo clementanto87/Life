@@ -1,0 +1,16 @@
+
+
+Component usered:
+
+1. Spring Boot -> root technology to build the microservice
+2. Zuul -> 	Edge Server
+3. Eureka -> Service Registration and Discovery
+4. Ribbon -> Dynamic Routing and Load Balancer
+5. Hystrix -> Circuit Breaker
+
+Step by Step:
+1. Create  producer project -> Simple Rest end point -> client application can call the uri to get the JSON or XML data
+2. Create consumer project -> Call the rest service -> to get the JSON or XML data
+3. Create a eureka server -> include eureka dependency and annotate springbootstarter class with @EnableEurekaServer
+3. Register producer module to the eureka server -> Register producer service with eureka server -> include the eureka dependency -> annotate the starter class with -> @EnableDiscoveryClient -> and include the eureka server URI in the properties files
+4. Register consumer module to the eureka server -> Register consumer service with eureka server -> include the eureka dependency -> annotate the starter class with -> @EnableDiscoveryClient -> and include the eureka server URI in the properties files

@@ -1,0 +1,14 @@
+
+Serialization :
+
+Converting OBJECT -> to -> STREAM of bytes
+
+Why?
+	1. Save it in file.
+	2. Save in database.
+	3. To passs to another JVM
+
+
+Take Away:
+
+All the instance variable in the class should implement serilizable marker interface

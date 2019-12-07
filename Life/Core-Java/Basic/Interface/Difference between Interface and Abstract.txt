@@ -1,0 +1,25 @@
+
+1. Class defination:
+
+		Abstract -> public abstract class MyClass
+		Interface -> interface MyInterface
+
+2. Class variables:
+		Abstract -> Can have any non-static and non-final variable
+		Interface -> Only public static final variable
+
+3. constructor:
+		Abstract -> can have constructor 
+		Interface -> cant have constructor 
+
+4. Methods:
+		Abstract -> Can have non-abstract and abstract methods 
+		Interface -> can only have public abstract methods
+
+5. Easy to evolve:
+		Abstract -> it is easy to evolve since we can provide implementation to the abstract class
+		Interface -> its not easy to evolve 
+
+6. Inheritance:
+		Abstract -> it can extends only on class
+		Interface -> it can extends any number of interfaces 

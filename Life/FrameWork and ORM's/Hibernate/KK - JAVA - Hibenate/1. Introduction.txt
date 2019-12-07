@@ -1,0 +1,17 @@
+
+Hibernate:
+
+		Is a ORM framework -> Object relationship mapping
+
+JPA -> java persistence api
+
+Session Factory
+	1. Immutable -> Thread safe
+	2. Factory for session instance
+	3. Very expensive, so each application should have only one session factory
+
+Session:
+	1. Single thread 
+
+Transaction:
+	1. Single Thread

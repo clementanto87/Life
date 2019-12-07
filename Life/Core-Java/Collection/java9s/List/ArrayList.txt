@@ -1,0 +1,34 @@
+List:
+
+	It is similar to the array; But it dynamically grow.
+
+	It store the elements in the order manner and no sorting by default.
+
+
+Array List:
+	
+	We can see different method of ArrayList class	
+
+	1. add(Object);
+
+	2. add(index,object);
+
+	3. clone() -> create a exact copy of the existing collection object 
+
+	4. contains() -> check the element present in the list ********** it required internal implementation of equals and hashcode
+
+	5. get(index) -> get the element or object based on the index.
+
+	6. indexOf() -> returns the index of the object -> it make use of equals and hashcode.
+
+
+Best Practice:
+_______________
+	1. user isEmpty() -> to check to the emptyness of the list -> instead of using the size.
+
+	2. for the iteration -> get the size store it on local variable and loop over that
+
+	for(int i=0; i<sizeOftheList; i++)
+
+	3. Make sure we can user the ensure capacity -> but not assure of it
+

@@ -1,0 +1,13 @@
+Object:
+
+1. getClass();
+2. public int hascode();
+3. public boolean equals(Object o);
+4. public String toString();
+
+5. notify();
+6. notifyAll();
+
+7. wait(millisecond);
+8. wait(millisecond,nanosecond);
+9. wait();

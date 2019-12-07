@@ -1,0 +1,16 @@
+
+Interface:
+
+	No method implementation till java 8. 
+
+Access specifier:
+
+class -> public abstract
+variable -> public static final
+methods -> public abstract 
+
+Why interface?
+	
+	1. Multiple inheritance,
+	2. Create contract and force the class to implement the methods.
+

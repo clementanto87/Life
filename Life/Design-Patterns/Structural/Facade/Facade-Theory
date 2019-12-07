@@ -1,0 +1,27 @@
+Facade Design Patterns: ->  Face of the building -> intraface which hides the sub-system
+______________________
+
+Client Application --> easy intract -> System
+
+	Ex: When the client want to generate different types of report (HTML, EXCEL or PDF) from different database (MYSQL, ORACLE and DB2). Client request the interface to provide the needed report. if the system become bigger in size. 
+	it tought to maintain the interface; to reduce the complicity wrapper interface been come into picture.
+
+According to GoF Facade design pattern is:
+__________________________________________
+
+    Provide a unified interface to a set of interfaces in a subsystem. Facade Pattern defines a higher-level interface that makes the subsystem easier to use.
+
+    Facade Design Pattern Diagram
+    _____________________________
+	Now Let’s try and understand the facade pattern better using a simple example. Let’s consider a hotel. This hotel has a hotel keeper. There are a lot of restaurants inside hotel e.g. Veg restaurants, Non-Veg restaurants and Veg/Non Both restaurants.
+		
+	You, as client want access to different menus of different restaurants . You do not know what are the different menus they have. You just have access to hotel keeper who knows his hotel well. Whichever menu you want, you tell the hotel keeper and he takes it out of from the respective restaurants and hands it over to you. Here, the hotel keeper acts as the facade, as he hides the complexities of the system hotel.
+
+	Facade Design Pattern Important Points
+	______________________________________
+
+     . Facade design pattern is more like a helper for client applications, it doesn’t hide subsystem interfaces from the client. Whether to use Facade or not is completely dependent on client code.
+     . Facade design pattern can be applied at any point of development, usually when the number of interfaces grow and system gets complex.
+     . Subsystem interfaces are not aware of Facade and they shouldn’t have any reference of the Facade interface.
+     . Facade design pattern should be applied for similar kind of interfaces, its purpose is to provide a single interface   rather than multiple interfaces that does the similar kind of jobs.
+     . We can use Factory pattern with Facade to provide better interface to client systems

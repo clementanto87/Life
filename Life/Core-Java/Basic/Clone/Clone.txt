@@ -1,0 +1,15 @@
+
+What is cloning?
+	Create a exact copy of the object created by not using new key work.
+
+Why cloning is needed?
+	If we are connecting to database to create instance of any object; it is costly process. 
+to avoid that we can go for cloning existing object into different copies.
+
+Different types of cloning:
+	1. Shallow cloning, -> if ony if we have primitive and wrapper variables there is no issues. 
+if we have the custome object reference in the class then it will create problem.
+
+	2. Deep cloning:
+
+		Creating the new instance of the reference variable. 

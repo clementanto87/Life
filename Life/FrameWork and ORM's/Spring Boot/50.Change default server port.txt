@@ -1,0 +1,13 @@
+1. Set it in application.propeties
+________________________________
+server.port=9090
+
+For Randam port:
+server.port=0
+	spring will provide random port everytime
+
+2. Change in eclipse:
+______________________
+
+a. run as -> run configuration -> envrironment -> server_port=9090
+b. Arguments --server_port=8989

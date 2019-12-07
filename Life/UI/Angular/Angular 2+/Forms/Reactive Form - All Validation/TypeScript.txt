@@ -1,0 +1,40 @@
+import { Component } from "@angular/core";
+import {
+  FormsModule,
+  FormGroup,
+  FormControl,
+  Validators
+} from "@angular/forms";
+import { UsernameValidator } from "./usernameValidator";
+
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
+})
+export class AppComponent {
+  form = new FormGroup({
+    account: new FormGroup({
+      username: new FormControl(
+        "",
+        [
+          Validators.required,
+          Validators.minLength(3),
+          UsernameValidator.cannotContainSpace
+        ],
+        UsernameValidator.shouldbeUnique
+      ),
+      password: new FormControl("", Validators.required)
+    })
+  });
+
+  get username() {
+    return this.form.get("account.username");
+  }
+  onSubmit() {
+    this.form.setErrors({
+      invalidLogin: true
+    });
+    console.log(this.form.value);
+  }
+}

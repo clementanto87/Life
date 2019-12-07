@@ -1,0 +1,26 @@
+List Interface: 
+
+1. add(index i, Object o);
+2. addAll(index i, Collection c);
+
+3. remove(index i);
+
+4. get(index i);
+5. set(index i, Object i);
+
+6. listIterator();
+7. subList();
+
+List Iterator:
+
+1. previos()
+2. hasPrevious()
+3. previousIndex()
+
+4. next()
+5. hasNext()
+6. nextIndex()
+
+7. add()
+8. remove()
+9. set()

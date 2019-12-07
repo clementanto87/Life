@@ -1,0 +1,11 @@
+Total Number of Steps: 
+
+Step 1: npm init 
+	To create the package.json file.
+Step 2: Install Express
+	npm install express
+Step 3: Install nodemon
+	npm install --save-dev nodemon
+
+Step 4: Install json web token and dotenv
+	npm i jsonwebtoken dotenv

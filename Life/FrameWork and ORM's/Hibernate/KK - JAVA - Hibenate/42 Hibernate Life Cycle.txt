@@ -1,0 +1,6 @@
+
+
+1. Transient
+2. Persistent
+3. Detached
+4. Removed

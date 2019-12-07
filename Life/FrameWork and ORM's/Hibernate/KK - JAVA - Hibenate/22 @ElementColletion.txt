@@ -1,0 +1,1 @@
+Save collection of object in a seperate table with foreign key reference

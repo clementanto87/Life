@@ -1,0 +1,44 @@
+Memory Managment:
+_________________
+
+5 different types of memory:
+
+1. Method area
+2. Heap area
+3. Stack area
+4. PC register
+5. Native Method stack
+
+
+How to increase the size of heap?
+
+xms - min size
+xmx - max siz
+
+Types of GC:
+
+1. Minor GC
+2. Major GC
+
+Different generation in GC?
+
+1. Eden or young generation
+2. S0 - Survival area 1
+3. S1 - Survival area 2
+4. Old generation
+
+5. Premenant Generation | from java 8 metasapce
+
+How to increase size of young generation?
+	-xmn sets the size of young generation 
+
+
+How to set the size of permenant generation?
+	-XX:PermSize - Starting size
+	-XX:MaxPermSize - set max size of the permenant generation
+
+Algorithm:
+
+	1. Serial GC
+	2. Parallel GC
+	3. Concurrent Mark sweep

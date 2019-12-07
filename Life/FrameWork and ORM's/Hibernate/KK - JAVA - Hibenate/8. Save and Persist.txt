@@ -1,0 +1,7 @@
+Save:
+
+Will save the entity class into table and return primary key value
+
+presist:
+
+will save the entity class into table and will not return anything

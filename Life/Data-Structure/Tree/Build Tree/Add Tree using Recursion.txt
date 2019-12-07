@@ -1,0 +1,64 @@
+package com.junit.calculator;
+
+public class App {
+
+	Node root;
+	
+	public void addNode(int data){
+		root = add(root, data);
+	}
+	
+	public Node add(Node n, int data){
+		
+		if(n==null){
+			n = new Node(data);
+			return n;
+		}
+		if(data<n.data)
+		n.left = add(n.left,data);
+		else if(data>n.data)
+		n.right = add(n.right,data);
+		
+		return n;
+	}
+	
+	public void display(){
+		show(root);
+	}
+	
+	public void show(Node n){
+		if(n==null)
+			return;
+		
+		show(n.left);
+		System.out.println(n.data);
+		show(n.right);
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		App app = new App();
+		app.addNode(3);
+		app.addNode(1);
+		app.addNode(2);
+		app.addNode(4);
+		app.addNode(5);
+		
+		app.display();
+	}
+	
+
+}
+
+class Node{
+	
+	Node left;
+	int data;
+	Node right;
+	
+	Node(int data){
+		this.data = data;
+	}
+}

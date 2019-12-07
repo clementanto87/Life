@@ -1,0 +1,24 @@
+
+
+Here lets see how to configure spring with hibernate using xml config:
+
+Step by Step:
+
+1. DAO Class:
+	1. Create a instance variable called "HibernateTemplate".
+	2. Code a setter method for the same.
+2. Model Class:
+	1. Create a model calss -> and provide all the needed annotations.
+
+3. Spring.xml
+	1. Create a bean for -> HibernateTemplate Class -> org.springframework.orm.hibernate5.HibernateTemplate
+	2. With constructor based injection for SessionFactory bean
+	3. Create a bean for -> SessionFactory -> org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean
+	4. With setter injection of datasource field
+	5. With List of model class
+	6. with hibernateproperties	
+
+
+4. hibernateTeamplate Methods,
+		1. save
+		2. get(class Name, id);

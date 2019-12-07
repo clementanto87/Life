@@ -1,0 +1,5 @@
+
+1. create -> it will create the schema | all the table will be dropped and recreated.
+2. update -> update the schema with new entry.
+3. validate -> validate the schema | will not change any thing on the DB
+4. create-drop -> when we close session factor schema will be dropped | and all the table associated with the schema would also be dropped

@@ -1,0 +1,19 @@
+
+1. Get
+
+	Object o = session.get(ClassName.class,primary key);
+
+
+2. Save or Persist or Post:
+
+	session.save(Object); // returns primary key
+	session.persist(Object); // void return
+
+3. Update
+
+	session.update(Object); // update based on primary key
+
+
+4. Delete 
+
+	session.delete(Object); // delete based on primary key

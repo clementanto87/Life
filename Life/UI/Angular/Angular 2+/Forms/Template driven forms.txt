@@ -1,0 +1,109 @@
+DIRECTIVE:
+
+	1. ngModel
+	2. ngForm
+	3. ngModelGroup
+
+
+
+<!-- form with the ngForm directive  -->
+<form action="" #f="ngForm" (ngSubmit)="onSubmit(f)" style="margin-left: 20px">
+  <!-- To create a complex object -->
+  <div ngModelGroup="contact"
+	 #contact="ngModelGroup">
+    <div *ngIf="!contact.valid">
+
+    </div>
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <!-- ngModel binding with the input field -->
+      <input 
+	required 
+	minlength="3" 
+	maxlength="10" 
+	pattern="banana" 
+	ngModel 
+	name="firstName" 
+	#firstName="ngModel"
+        (change)="log(firstName)" 
+	id="firstName" 
+	type="text" 
+	class="form-control">
+      <!-- validation based in the user input -->
+      <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+        <div *ngIf="firstName.errors.required">First Name is required</div>
+        <div *ngIf="firstName.errors.minlength">First name should be min 3 character</div>
+        <div *ngIf="firstName.errors.maxlength">First name should be max 10 character</div>
+        <div *ngIf="firstName.errors.pattern">First name doesn't match the patter</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- textarea with ngModel -->
+  <div class="form-group">
+    <label for="comment">Comment:</label>
+    <textarea ngModel class="form-control" name="comment" rows="5" id="comment">
+    </textarea>
+  </div>
+
+  <!-- check box with ngModel association -->
+  <div class="checkbox">
+    <label><input type="checkbox" value="" name="isSubscribed" ngModel>Subscribe mailing list</label>
+  </div>
+
+  <!-- Drop Down -->
+  <div class="form-group">
+    <label for="contactMethod">Select list:</label>
+    <!-- To select multiple value add multiple in select -->
+    <select multiple class="form-control" id="contactMethod" ngModel name="contactMethod">
+      <option value=""></option>
+      <option *ngFor="let method of contactMethods" [value]="method.id">{{ method.name}}</option>
+      <!-- To send the object itself use ngValue directive as shown below -->
+      <!-- <option *ngFor="let method of contactMethods" [ngValue]="method">{{ method.name}}</option>        -->
+    </select>
+  </div>
+
+  <!-- Radio button static -->
+  <div class="radio">
+    <label><input type="radio" name="optradio" value="1" ngModel>Email</label>
+  </div>
+  <div class="radio">
+    <label><input type="radio" name="optradio" value="2" ngModel>Phone</label>
+  </div>
+
+  <!-- Dynamic radio button -->
+  <h5>Dynamic Radio button:</h5>
+  <div class="radio" *ngFor="let method of contactMethods" >
+    <label><input type="radio" name="optradio" [value]="method.id" ngModel>{{method.name}}</label>
+  </div>
+
+
+  <!-- print the filed values -->
+  <p>{{ f.value | json }}</p>
+
+  <!-- Button to submit and enable only if all the fields are valid -->
+  <button class="btn btn-primary" [disabled]="!f.valid">Button</button>
+</form>
+
+
+CSS:
+
+.form-control.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+
+TYPE SCRIPT:
+
+  contactMethods = [
+    { id: 1, name: 'E-mail' },
+    { id: 2, name: 'Phone' }
+  ];
+
+  log(firstName) {
+    console.log(firstName);
+  }
+
+  onSubmit(f) {
+    console.log(f);
+  }

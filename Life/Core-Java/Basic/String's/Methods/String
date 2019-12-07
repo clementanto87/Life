@@ -1,0 +1,54 @@
+String:
+
+C:
+1. concat();
+2. codePointAt();
+3. codePointBefore();
+4. compareTo();
+6. charAt();
+7. chars(); -> IntStream return
+8. compareToIngnores();
+9. contains();
+10. contentEquals();
+
+E:
+1. equals();
+2. equalsIngnores();
+3. endsWith();
+
+G:
+1. getBytes();
+
+H:
+1. hashCode();
+
+I:
+1. indexOf();
+2. intern();
+
+L:
+1. length();
+2. lastIndexOf();
+
+M:
+1. match();
+
+R:
+1. replace();
+2. replaceAll();
+3. replaceFirst();
+
+S:
+1. split();
+2. subString();
+
+T:
+1. trim();
+2. toString();
+3. toCharArray();
+4. toUpperCase();
+5. toLowerCase();
+
+
+V:
+1. valueOf();

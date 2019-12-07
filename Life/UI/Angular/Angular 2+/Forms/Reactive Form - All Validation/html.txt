@@ -1,0 +1,57 @@
+<div class="container">
+  <form [formGroup]="form">
+    <div *ngIf="form.errors" class="alert alert-danger">
+      User details invalid
+    </div>
+    <div formGroupName="account">
+      <div class="form-group">
+        <label for="email">User Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          formControlName="username"
+        />
+        <div *ngIf="username.pending">checking for uniquness...</div>
+        <div *ngIf="username.touched && username.invalid">
+          <div *ngIf="username.errors.required" class="alert alert-danger">
+            UserName is required
+          </div>
+          <div *ngIf="username.errors.minlength" class="alert alert-danger">
+            Less than 3
+          </div>
+          <div
+            *ngIf="username.errors.cannotContainSpace"
+            class="alert alert-danger"
+          >
+            Cannot contains space
+          </div>
+          <div
+            *ngIf="username.errors.shouldbeUnique"
+            class="alert alert-danger"
+          >
+            Should be unique
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input
+          type="password"
+          class="form-control"
+          id="pwd"
+          formControlName="password"
+        />
+      </div>
+    </div>
+    <button
+      [disabled]="form.invalid"
+      type="submit"
+      class="btn btn-default"
+      (click)="onSubmit()"
+    >
+      Submit
+    </button>
+  </form>
+  {{ form.value | json }}
+</div>

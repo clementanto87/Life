@@ -1,0 +1,5 @@
+
+1. repository<Object,Integer>
+2. crudRepository
+3. sortingandpagingRepository
+4. JPARepository

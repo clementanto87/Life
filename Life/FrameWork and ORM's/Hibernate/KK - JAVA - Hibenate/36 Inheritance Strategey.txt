@@ -1,0 +1,5 @@
+
+
+1. Single table
+2. Table per class
+3. Join or Table per sub class

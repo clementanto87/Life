@@ -1,0 +1,5 @@
+Hibernate:
+
+	Its a ORM -> Object relationship mapping
+	Map -> the object with the table rows
+

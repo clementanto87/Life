@@ -1,0 +1,14 @@
+
+Transaction:
+
+Group of activites -> that are performed as -> single unit of work
+
+ACID property:
+
+Atomic: All the activities are occure or none
+
+Consistent: 
+
+Isolated 
+
+Durable:

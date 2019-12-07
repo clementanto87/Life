@@ -1,0 +1,5 @@
+Command Pattern is one of the Behavioral Design Pattern. Command design pattern is used to implement loose coupling in a request-response model. 
+
+In command pattern, the request is send to the invoker and invoker pass it to the encapsulated command object.
+
+Command object passes the request to the appropriate method of Receiver to perform the specific action

@@ -1,0 +1,13 @@
+	Bi-directional: 
+1. hasNext();
+2. next();
+3. nextIndex();
+
+4. hasPrevious();
+5. previous();
+6. previousIndex();
+
+
+7. add(object);
+8. remove();
+9. set(index,object);

@@ -1,0 +1,8 @@
+
+Expression:
+
+To display the model on the view 
+
+Syntex:
+
+	{{ model name }}

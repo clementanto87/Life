@@ -1,0 +1,5 @@
+
+
+Hibernate Query Langurage:
+
+It make use of class name insted of table name

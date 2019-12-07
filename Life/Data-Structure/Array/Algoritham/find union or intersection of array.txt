@@ -1,0 +1,36 @@
+package com.dp.bridge;
+
+import java.util.Arrays;
+
+public class Test {
+	
+	public static void main(String[] args){
+		
+		int a[] ={2,3,4,6,9};
+		
+		int b[] = {1,2,4,5,8};
+		//1234562689
+		int i,j;
+		i = j = 0;
+		while(i<a.length && j<b.length){
+			if(a[i]<b[j]){
+				i++;
+				//System.out.print(a[i++]);
+			}else if(a[i]>b[j]){
+				j++;
+				//System.out.print(b[j++]);
+			}else if(a[i]==b[j]){
+				System.out.print(b[j++]+" ");
+				i++;
+			}
+		}
+		
+		/*while(i<a.length)
+			System.out.println(a[i++]);
+		while(j<b.length)
+			System.out.println(b[j++]);*/
+	}
+	
+
+
+}

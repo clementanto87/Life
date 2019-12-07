@@ -1,0 +1,11 @@
+Vector: Thread-safe 
+
+1. Slower
+2. grow double in size ; grows beyond its need
+
+ArrayList: No Thread-safe
+
+1. Faster
+2. It grow by half of it existing size
+
+

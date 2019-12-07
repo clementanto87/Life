@@ -1,0 +1,26 @@
+Methods:
+
+Methods:
+
+1. addFirst();
+2. addLast();
+
+3. getFirst();
+4. getLast();
+
+5. removeFirst();
+6. removeLast();
+
+7. peek();
+8. peekFirst();
+9. peekLast();
+
+10. poll();
+11. pollFirst();
+12. pollLast();
+
+	
+13. offer(element);
+14. offerFirst(e);
+15. offerLast(e);
+16. descendingInterator();

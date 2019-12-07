@@ -1,0 +1,6 @@
+
+Inner join is to fetch the common between two tables,
+
+select emp.name,dept.name from emp inner join dept on emp.id = dept.id;
+
+Above query will fetch the common match between two tables.

@@ -1,0 +1,10 @@
+let names = ["alex", "anto"];
+
+let copyName = [...names];
+
+let person = {
+  name: "alex",
+  age: 12
+};
+
+let copyPerson = { ...person };

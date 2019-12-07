@@ -1,0 +1,31 @@
+
+GET: 
+
+$scope.buttonClick = function() {
+		$http.post("getEmployee" ).then(function(response) {
+			$scope.employees = response.data;
+		});
+	};
+
+
+
+POST: 
+
+var employee = [ {
+		id : '103',
+		name : 'anto',
+		dept : 'Bio'
+	},
+		{
+			id : '103',
+			name : 'tino',
+			dept : 'civil'
+		}
+
+	];
+	
+	$scope.buttonClick = function() {
+		$http.post("postEmployee", employee).then(function(response) {
+			$scope.employees = response.data;
+		});
+	};

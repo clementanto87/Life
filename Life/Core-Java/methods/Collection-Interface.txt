@@ -1,0 +1,23 @@
+Collection Interface Methods:  15 methods
+_____________________________
+
+1. add(Object o);
+2. remove(Object o);
+3. retain(Object o)
+
+4. public int size();
+5. public boolean isEmpty();
+6. clear(); 
+
+7. addAll(Collection c);
+8. removeAll(Collection c);
+9. retainAll(Collection);
+
+10. public boolean contain(object o);
+11. public boolean containAll(Collection c);
+
+12. toArray();
+13. iterator();
+
+14. hascode();
+15. toString();

@@ -1,0 +1,6 @@
+Atomic Variable:
+
+1. AtomicInteger
+2. AtomicBoolean
+
+Internally it is volatile key word

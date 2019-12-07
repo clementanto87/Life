@@ -1,0 +1,18 @@
+1. docker version
+
+// Image
+2. docker images -> List
+3. docker rmi #Image Id -> Delete
+
+// Container
+3. docker create #Image Id -> Create
+4. docker start -a #Container Id -> Start with log stack
+5. docker run #Image Id -> Create and Start
+6. docker rm #Container Id -> Delete
+
+7. docker logs #Container Id -> Logs
+
+// Access the containers
+8. docker exec -it #Container Id <Commands> (EX: redis-cli)
+9. docker exec -it #Container Id sh
+10. docker run -it #Container Id sh

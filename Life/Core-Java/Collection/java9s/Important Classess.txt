@@ -1,0 +1,16 @@
+
+Two Important classses;
+
+	1. Collections 
+	2. Arrays
+
+
+1. Methods of Collections:
+
+	a. Collections.sort();
+	b. Collections.synchronizedList(list)
+
+2. Methods of Arrays:
+	a. Arrays.asList();
+	b. Arrays.sort();
+	c. Arrays.stream();

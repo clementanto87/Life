@@ -1,0 +1,30 @@
+2 Type of Cache:
+
+	1. Primary or Session level
+	2. Secondary or Application level 
+
+
+1. Session Level:
+		Default catch
+
+2. Application Level (Ex: ehCache)
+	1. Import a JAR files,
+	2. Make a entry in the hibernate.cfg.xml file 
+
+			 <property name="hibernate.cache.use_second_level_cache">true</property>
+       		 <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+        	 <property name="hibernate.cache.use_query_cache">true</property>
+
+     3. Annotate the the class
+     		1. @Cacheable
+			2. @Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
+
+
+For Query:
+
+		Query query = session.createQuery("from Car where carNo=1987");
+		query.setCacheable(true);
+		
+	
+		c = (Car) query.uniqueResult();
+		System.out.println(c);		

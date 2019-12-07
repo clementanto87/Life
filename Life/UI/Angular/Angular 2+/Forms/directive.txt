@@ -1,0 +1,12 @@
+Template form:
+
+1. ngForm -> #form = "ngForm"
+2. ngModel -> 
+2. ngModelGroup
+
+Reactive or Data driven form:
+
+1. formGroup -[formGroup]
+2. formControlName - formControlName
+3. formGroupName - [formGroupName]
+4. formArrayName - formArrayName

@@ -1,0 +1,15 @@
+
+There are 5 different SCOPE's in spring?
+
+When caller reqest for the bean
+
+	Non-Web-Aware-Context:
+
+	1. Singelton -> Single bean instance / spring context -> same bean instance will be return from the spring container
+	2. Prototype -> container return new instance each when the request for the bean
+
+	Web-Aware-Context
+
+	1. Request -> Single bean per http request -> valid only in the context of web application
+	2. Session -> Single bean per session 
+	3. Application or Global session -> Single bean per global httpsession -> it valid only in the portlet context

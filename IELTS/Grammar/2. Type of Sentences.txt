@@ -1,0 +1,12 @@
+1. Simple
+2. Compound
+3. Complex
+
+Simple -> One simple sentence
+
+Compound -> 2 simple sentence or 2 Indepedent clause + (connected by) + co-ordinate conjuction.
+	comma (,) should be seperating 2 clauses
+
+Complex -> 1 Independent clause + 1 dependent clause (connected by) subordinate conjuction.
+
+If only dependent clause come first we user comma

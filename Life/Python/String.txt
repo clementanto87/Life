@@ -1,0 +1,14 @@
+Can be inside " double quotes or ' single quotes
+
+x = "alex"
+
+print(x[o]) #a
+
+print(x[0:2]) #al
+
+1. strip() - is nothing but trim in java
+2. len(x) - find the length
+3. x.lower() - convert to lower
+4. x.upper() -convert to upper
+5. x.replace("","")
+6. x.split("")

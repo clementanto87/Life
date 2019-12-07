@@ -1,0 +1,22 @@
+Unit Testing:
+
+Method level Annotations:
+	1. @BeforeClass -> Annotated method should be STATIC
+	2. @Before -> every time before test method runs
+	3. @Test -> actual test method
+	4. @After -> every time after test method runs
+	5. @AfterClass -> should be static methond; runs only once per class
+	6. @Ignore -> Ignore the test method
+
+Methods: 
+assertArraysEquals - to array are equal
+assertEquals - to object are equal
+assertFalse - condition is false
+assertNotNull - object is not null
+assertNull - object is null
+assertSame - two object refer to same object
+assertThat - specifies the condition 
+assertTrue - condition is true
+fail() - fails a test with no message
+
+3. unitsuite

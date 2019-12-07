@@ -1,0 +1,73 @@
+1. Simple links,
+	<a routerLink="followers">Followers</a>
+2. Complex Links:
+	<a [routerLink]="['/followers',follower.id]">{{ follower.login }}</a>
+
+3. To highlight the current tab in nav - bar:
+	routerLinkActive="active current"
+
+4. How to get the path variable in angular
+	1. module.ts
+		path: 'followers/:userid',
+	        component: GithubProfileComponent
+	2. component.ts
+		a. import { ActivatedRoute } from '@angular/router';
+		b. constructor(private router: ActivatedRoute) { }	
+		c.   ngOnInit() {
+		let id = this.router.snapshot.paramMap.get('userid');	
+
+		    this.router.paramMap.subscribe(params => {
+		        console.log(params.get('userid'));
+		    });
+
+5. Multiple path variable in the link,
+	<a [routerLink]="['/followers',follower.id,follower.login]">{{ follower.login }}</a>
+
+6. How to get query param?
+
+	1. HTML
+		<li routerLinkActive="active current"><a routerLink="followers" [queryParams]="{page: 1, order: 'newest'}">Followers</a></li>
+	2. component.ts
+		a. import { ActivatedRoute } from '@angular/router';
+		b. constructor(private router: ActivatedRoute) { }	
+		c.   ngOnInit() {
+		let id = this.router.snapshot.queryParamMap.get('userid');	
+
+		    this.router.queryParamMap.subscribe(params => {
+		        console.log(params.get('userid'));
+		    });
+
+7. Combaine and get both query and path variable,
+	1. Import:
+		import { ActivatedRoute } from '@angular/router';
+		import { Observable } from 'rxjs/Observable';
+		import 'rxjs/add/observable/combineLatest';
+	2. constructor(private router: ActivatedRoute) { }
+	
+	3.   ngOnInit() {
+    		Observable.combineLatest([
+    		  this.router.paramMap,
+     		 this.router.queryParamMap
+    			]).subscribe(combine => {
+       			 let userid = combine[0].get('userid');
+        		let order = combine[1].get('order');
+		    });
+	}
+
+8. Use map and switchMap:
+
+ Observable.combineLatest([
+      this.router.paramMap,
+      this.router.queryParamMap
+    ]).map(combine => {
+        let userid = combine[0].get('userid');
+        let order = combine[1].get('order');
+    });
+
+ Observable.combineLatest([
+      this.router.paramMap,
+      this.router.queryParamMap
+    ]).switchMap(combine => {
+        let userid = combine[0].get('userid');
+        let order = combine[1].get('order');
+    });

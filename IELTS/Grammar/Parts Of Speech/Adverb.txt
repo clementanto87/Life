@@ -1,0 +1,10 @@
+Adverb:
+Give information about verb, adverb and adjective.
+Words ends with 'ly' can be adverb.
+
+Types:
+1. Manner
+2. Degree
+3. Place
+4. Time
+5. Frequency

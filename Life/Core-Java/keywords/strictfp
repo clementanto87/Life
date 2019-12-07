@@ -1,0 +1,27 @@
+1. strictfp:  Introduced in java 1.2 version
+_________________________________________
+
+Def: 
+	To ensure the same float value is available in all the platform | program might need every platfrom need same floating behaviour (EX: windows,linux or mac)
+
+where to user?
+		It can be user before 
+			1. Class -> All the float value defiend in the class will become strictfb
+			2. Method -> For all the local float variable
+			3. Interface -> All the inheritated class will get this property.
+
+where it cant be used?
+			1. Abstract methods,
+			2. Constructors,
+			3. Variables.
+
+
+2. Big-Integer and Big-Decimal: Introduced in java 5 | it a im-mutable
+_______________________________________________
+		Integer -> 32bit data -> 8*4 byte
+		Long -> 64bit of data -> 8*8 byte
+
+How to do or assign value?
+		1. BigInteger big = new BigInteger("324242342374929847293649263423864234");
+
+

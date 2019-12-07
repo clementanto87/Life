@@ -1,0 +1,14 @@
+
+Isolation Level's in spring framework:
+
+Dirty read 
+non repeateable
+phantom
+
+Levels:
+
+1. Isolation_read_uncommitted
+2. Isoaltion_read_committed
+3. Isolation_repeateable_read
+4. Isolation_serializable
+

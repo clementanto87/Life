@@ -1,0 +1,9 @@
+
+
+Map Accessing using Spring expression langurage:
+
+<bean>
+
+	<property name="" value="#{mapBeanName['key value']}" /> 
+
+</bean>

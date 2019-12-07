@@ -1,0 +1,8 @@
+When is false?
+
+1. null
+2. undefined
+3. ""
+4. NaN
+5. 0
+6. -0

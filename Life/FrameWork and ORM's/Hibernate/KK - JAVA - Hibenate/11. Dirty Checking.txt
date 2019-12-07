@@ -1,0 +1,3 @@
+Only changed field of the object are updated other are left aside.
+
+Inside the session scope of the hibernate if we change the state of the object even if we dont explicity call the update method; the update statement would be triggered.

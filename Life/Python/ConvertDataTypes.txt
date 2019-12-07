@@ -1,0 +1,3 @@
+1. int() to convert to integer
+2. float() to convert to float
+3. str() to convert to string

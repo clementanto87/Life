@@ -1,0 +1,8 @@
+
+
+Why?
+
+Stop cascading failure,
+
+1. FallBack method,
+2. Circute breaker.

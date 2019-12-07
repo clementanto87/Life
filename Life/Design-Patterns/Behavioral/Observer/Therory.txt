@@ -1,0 +1,13 @@
+Observer DesignPattern:
+
+It is the technique where, insted we make call to the target object to know the update of the state of the object.
+
+Targer Object will trigger the notification to all the observes. by that way it reduces the unwanted traffic on the server.
+
+Example:
+
+Stock Marker -> notification about the raise in the stock price.
+
+Cricket Score -> notification in the score on the regular basis.
+
+

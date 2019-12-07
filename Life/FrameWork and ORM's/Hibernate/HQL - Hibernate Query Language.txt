@@ -1,0 +1,34 @@
+Why HQL?
+	If we want to only some column for the row; we can go for HQL. 
+	Not to fetch entire row; Go for HQL.
+
+
+Syntex:
+
+	SQL: select * from table_name; 
+	HQL: from class_name;
+
+
+Get the only one ROW:
+____________________
+	Get all the column
+	1. Student students = query.uniqueResult();
+
+	Specific column
+	2. Query query = session.createQuery("select rollNo,name,mark from Student where rollNo=7");
+		
+	Object[] students =  (Object[])query.uniqueResult();
+		
+	System.out.println(students[0] +" : "+students[1]+ " : "+students[2]);
+
+Get the MANY rows as list
+_________________________
+	Get all the column
+	1. List<Student> students = query.list();
+	
+	Specific column
+	2. Query query = session.createQuery("select rollNo,name,mark from Student");
+		List<Object[]> students =  (List<Object[]>)query.list();
+		
+		for(Object[] student : students)
+		System.out.println(student[0] +" : "+student[1]+ " : "+student[2]);

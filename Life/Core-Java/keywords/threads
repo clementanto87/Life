@@ -1,0 +1,14 @@
+
+1. syn-chro-nized:
+________________
+		Only one thread can execute at same time.
+
+2. Transient:
+__________
+		-> Will prevent from Seria-liz-ation.
+		-> It cant be used with static variable.
+
+3. Vola-tile:
+______________
+		-> if we define a instance variable as vola-tile -> thread will go look into main memory everytime | it will not get the value for cache.
+		-> Can't be used with static variable

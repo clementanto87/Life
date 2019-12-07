@@ -1,0 +1,14 @@
+
+
+@Required Annotaion:
+	
+	on the setter method of the property 
+
+
+	Ex: 
+
+
+	@Required
+	public void setStudentName(){
+
+	}
