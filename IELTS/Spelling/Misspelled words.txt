@@ -1,12 +1,20 @@
+A:
+Anni'ver'sary 
+Ad'ver'sary -> 
+
 B:
 Be'ne'fits -> Benefits
 
 C:
 Cri'te'ria -> Criteria
+Com'pe'ti'tion
 
 E:
 Eli'gi'ble -> Eligible
 Eli'gi'bi'lity -> Eligibility
+
+F:
+Fa'ci'li'ty
 
 M:
 Mathe'ma'tics -> Mathematics

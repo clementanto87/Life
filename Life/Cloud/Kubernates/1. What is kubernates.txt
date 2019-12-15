@@ -1,0 +1,8 @@
+It is for horizontal scaling of appplication.
+
+One can able to scale up instance of a service and also can scale down at the same time.
+
+What all we need to take care in kubernates?
+	1. Kubernates work on existing images, so there should be a image availabe for kubernates to work.
+	2. There should a config file for each object we want to create.
+	3. Unlike docker-compose, we have to perform manual configuration of port.
