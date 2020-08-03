@@ -1,0 +1,120 @@
+import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormArray, FormControl } from "@angular/forms";
+import { ActivatedRoute, Router } from '@angular/router';
+import { Route } from '@angular/compiler/src/core';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
+})
+export class AppComponent implements OnInit {
+  title = "myProject";
+  form;
+  items;
+
+  constructor(private fb: FormBuilder, private router: Router, private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.http.get("https://jsonplaceholder.typicode.com/posts", {observe: 'response'}).subscribe(res => {
+      console.log(res.body);
+      this.items = res.body;
+    });
+
+    this.buildForm();
+  
+  }
+
+  get roles() {
+    return this.form.get('roles') as FormArray;
+  }
+
+  onSubmit() {
+    console.log(this.form.value);
+  }
+
+  buildForm() {
+    this.form = this.fb.group({
+      id: [],
+      name: [],
+      address: this.fb.group({
+        pin: [],
+        street: []
+      }),
+      roles: this.fb.array([]),
+      friends: this.fb.array([])
+    });
+
+    this.addRole();
+    this.addFriends();
+  }
+
+  addFriends() {
+    const friends = this.form.get('friends') as FormArray;
+    const friend = this.fb.group({
+      name: [],
+      age: []
+    })
+    friends.push(friend);
+  }
+  
+  addRole() {
+    const role = this.roles as FormArray;
+    role.push(new FormControl());
+  }
+
+  removeRole(index) {
+    const role = this.roles as FormArray;
+    role.removeAt(index);
+  }
+
+  remove(id) {
+      const index = this.items.findIndex(item => {
+        return item.id === id; 
+      });
+
+      this.items.splice(index, 1);
+  }
+  onClick() {
+    console.log(this.items);
+  }
+  
+  
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+<!-- <div class="menu">
+<a (click)="home()" class="home">Home</a>
+<a (click)="help()" class="help">Help</a>
+</div>
+<router-outlet></router-outlet> -->
+
+<form [formGroup]="form">
+    ID: <input class="" type="text" name="" formControlName="id">
+    NAME: <input type="text" formControlName="name">
+    <div formGroupName="address">
+        PIN: <input type="text" formControlName="pin">
+        STREET: <input type="text" formControlName="street">
+    </div>
+    <div *ngFor="let role of form.get('roles').controls; let i = index" formArrayName="roles">
+        Role: <input formControlName="{{i}}"> <button (click)="addRole()">Add Role</button>
+        <button (click)="removeRole(i)">Remove Role</button>
+    </div>
+    <div *ngFor="let friend of form.get('friends').controls; let i = index" formArrayName="friends">
+        <div [formGroupName]="i">
+            NAME: <input type="text" formControlName="name">
+            AGE: <input type="text" formControlName="age">
+        </div>
+        <button (click)="addFriends()">Add friend</button>
+    </div>
+    <button (click)="onSubmit()">Submit</button> 
+</form>
+
+
+<!-- <button (click)="onClick()">Submit</button> -->
+<div *ngFor="let item of items">
+    <h1 (click)="remove(item.id)">{{ item.title }}</h1>
+</div>
