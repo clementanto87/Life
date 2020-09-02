@@ -1,0 +1,34 @@
+1. Parent and Child Communication
+2. How to display content in HTML? Interpolation, property biniding and two way data binding
+2. a. Angular Life cycle hook
+
+3. Create Module Component, Service, Directive and Pipe
+	1. Feature Module
+
+4. Routing 1. Progamatic 2. Declarative
+	1. Query Param  - ActivatedRoute
+	2. Param Map 
+	
+	1. Lazy loading
+	2. Different properties of routing
+
+	1. <router-outlet>
+
+5. Gaurds
+	1. CanActivate
+	2. CanDeactivate
+	3. CanLoad
+	4. CanActivateChild
+	5. Resolve
+
+6. Forms
+	1. Tempalte driven
+	2. Reactive Form
+	
+		Validation
+	
+
+
+	
+	
+

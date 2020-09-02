@@ -1,0 +1,32 @@
+Body: T S E A So R
+	Topic
+Firstly,
+First and foremost,
+One advantage is
+The most significant problem is
+
+	Result
+As a result,
+As a consequence,
+Therefore,
+The result of this is
+
+	Example
+For example,
+To illustrate,
+For instance,
+To illustrate this point
+
+
+	Alternate
+On the other hand,
+However,
+Turing to the other side of the argument,
+Nevertheless
+
+	Supporting
+This is because
+The reason for this is
+This happens because
+This is an advantage 
+	

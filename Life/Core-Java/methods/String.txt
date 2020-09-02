@@ -41,13 +41,14 @@ R:
 S:
 1. split();
 2. subString();
+3. startswith()
 
 T:
 1. trim();
 2. toString();
 3. toCharArray();
-4. toUpper();
-5. toLower();
+4. toUpperCase();
+5. toLowerCase();
 
 
 V:

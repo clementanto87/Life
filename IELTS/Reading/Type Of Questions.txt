@@ -1,0 +1,16 @@
+Order (FM TSC SC NOTGIVEN)
+1. Fill in the blank (F)
+2. Short Answer (S)
+3. True, false and not given (yes, no, notgive) (TF)
+4. Multiple choice (M)
+5. Chart Question (C)
+6. Table Question (T)
+7. Sentence Completion (SC)
+
+No-Order: (MC DSP PI)
+1. Matching Question (M)
+2. Classification Question (C)
+3. Diagram question (D)
+4. Paragraph location (P) **
+5. Summary Question (S)
+6. Pick 2 or 3 from the list (PI) **
