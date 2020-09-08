@@ -1,0 +1,16 @@
+Create Django Poject and App: https://docs.djangoproject.com/en/3.0/intro/tutorial01/
+
+Create Django Enviroment: https://docs.djangoproject.com/en/3.0/howto/windows/
+
+Some Commands:
+
+To create project: 
+	django-admin startproject <name-of-the-project>
+
+To start server: 
+	python manage.py runserver
+
+To create App:
+	python manage.py startapp <name-of-the-app>
+
+
