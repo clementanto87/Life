@@ -1,0 +1,2 @@
+Def:
+	The method calls itself until the base condition is satisfied.

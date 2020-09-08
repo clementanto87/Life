@@ -1,0 +1,6 @@
+
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(ñ¹ƒÑúÿÿÿÿ8–Âª±À.
+Q
+java:S1854"5Remove this useless assignment to local variable "n".(êÚ¹b8±À.
+J
+java:S1121".Extract the assignment out of this expression.(êÚ¹b8±À.

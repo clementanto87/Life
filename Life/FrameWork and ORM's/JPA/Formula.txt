@@ -1,4 +1,4 @@
-Uni-Direction:
+Uni-Direction: (value of the primary key is not provided then give cascade.all)
 
 1. OneToOne -> 2 table (FK same side table)
 

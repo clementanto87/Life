@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="build.snapshots.repo" />
+      <option name="name" value="build.snapshots.repo" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-roo-repository" />
+      <option name="name" value="Spring Roo Repository" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-maven-snapshot" />
+      <option name="name" value="Spring Maven Milestone Repository" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="deploy.milestones.repo" />
+      <option name="name" value="deploy.milestones.repo" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="apache-maven2" />
+      <option name="name" value="apache-maven2" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="3rd-party.milestones.procurement.group" />
+      <option name="name" value="3rd-party.milestones.procurement.group" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nuxeo.release.repo" />
+      <option name="name" value="nuxeo.release.repo" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-maven-release" />
+      <option name="name" value="Spring Maven Release Repository" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="deploy.snapshots.repo" />
+      <option name="name" value="deploy.snapshots.repo" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-maven-milestone" />
+      <option name="name" value="Spring Maven Milestone Repository" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="apache-maven" />
+      <option name="name" value="apache-maven" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-roo-repository-annotation" />
+      <option name="name" value="Spring Roo Repository annotation" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="build.snapshots.sonatype" />
+      <option name="name" value="build.snapshots.sonatype" />
+      <option name="url" value="http://nexus:8081/nexus/content/groups/build.milestones/" />
+    </remote-repository>
+  </component>
+</project>

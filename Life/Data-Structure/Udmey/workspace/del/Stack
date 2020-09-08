@@ -1,0 +1,25 @@
+class Stack {
+
+    int stack[] = new int[5];
+    int size = 0;
+
+    public void add(int data) {
+        stack[size++] = data;
+    }
+
+    public void show() {
+        for (int data : stack) {
+            System.out.println(data);
+        }
+    }
+
+    public static void main(String[] args) {
+        Stack stack = new Stack();
+        stack.add(1);
+        stack.add(2);
+        stack.add(3);
+
+        stack.show();
+    }
+
+}
