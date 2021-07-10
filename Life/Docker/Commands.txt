@@ -1,4 +1,7 @@
-1. docker images --> view all the images
+docker --version
+docker-compose --version
+
+1. docker images || docker images -a --> view all the images
 
 2. docker rmi <image name> --> Remove image
 
@@ -7,6 +10,15 @@
 4. docker ps -a --> View all the containers
 
 5. docker stop -> is to stop the container
+
+
+// To pull in image from docker hub
+
+docker pull <imageName:version> ->If version is not mentioned it will pull latest version
+
+docker inspect <image> -> to inspect or get detail about the image 
+
+
 
 
 _________________________________________________

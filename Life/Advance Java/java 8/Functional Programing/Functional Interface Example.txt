@@ -1,0 +1,49 @@
+package com.infotech.order;
+
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.Collectors;
+
+public class Test {
+    public static void main(String[] args) {
+        // Runnable
+        Runnable runnable = () -> {
+            System.out.println("Runnable Interface");
+        };
+        runnable.run();
+
+        // Supplier
+        Supplier<String> supplier = () -> "Supplier Interface";
+        System.out.println(supplier.get());
+
+        // Consumer
+        Consumer<String> consumer = s -> {
+            System.out.println(s.toUpperCase());
+        };
+        consumer.accept("consumer interface");
+
+        //Function
+        Function<Integer, String> function = integer -> "alex";
+        new Test().test(function);
+
+        // Predicate
+        Predicate<String> predicate = s -> {
+            return s.equals("alex");
+        };
+        predicate.test("alex");
+
+        //BiFunction
+        BiFunction<Integer, String, String>  biFunction =  (integer, s) -> "bi function interface";
+        System.out.println(biFunction.apply(1, "alex"));
+
+        IntFunction<String> stringIntFunction = value -> "alex";
+
+        ToIntFunction<Integer> toIntFunction = value -> 1;
+
+    }
+
+    private void test(Function<Integer, String> function) {
+        String apply = function.apply(1);
+        System.out.println(apply);
+    }
+}
