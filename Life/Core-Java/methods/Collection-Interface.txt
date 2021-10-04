@@ -12,6 +12,7 @@ _____________________________
 7. addAll(Collection c);
 8. removeAll(Collection c);
 9. retainAll(Collection);
+removeAll
 
 10. public boolean contain(object o);
 11. public boolean containAll(Collection c);

@@ -1,0 +1,12 @@
+
+=
+java:S2129" Remove this "String" constructor(Êß‰ê8›‰›ÕË.
+]	java:S125
+"<This block of commented-out lines of code should be removed.(ˆ‹Õ³üÿÿÿÿ8›‰›ÕË.
+W	java:S125"<This block of commented-out lines of code should be removed.(¼ãÁ@8›‰›ÕË.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(þ•§ü8›‰›ÕË.
+V
+java:S1854"9Remove this useless assignment to local variable "name1".(Êß‰ê8›‰›ÕË.
+G
+java:S1481"*Remove this unused "name1" local variable.(Êß‰ê8›‰›ÕË.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(«‹Îõ8›‰›ÕË.

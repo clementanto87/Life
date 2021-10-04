@@ -1,0 +1,22 @@
+IAM - Identity and access management - level of access to aws console
+	- Centralise control on the access of aws account
+	- Shared access to aws account 
+	- Granular access to aws account
+	- Identity federation 
+	- MFA (multi factor authentication)
+	- Provide temporary access to the user
+	- Password rotation policy
+	
+
+Terminology:
+
+User:
+	People or employee of the organization 
+Group:
+	Collection of user, each group will have different level of access
+Policies:
+	are in JSON formate, it is permission given to user and group
+Roles:
+	Role to access different resource in the AWS
+
+

@@ -1,0 +1,14 @@
+Region - Physical location  - Can have one or more availability zone / Datacenter if it is close to each other
+
+Availability zone - one or more Datacenter if it is close to each other
+
+Edge Location - smaller location 
+
+
+Topics:
+
+Compute
+Storage
+Databases
+Network and Content Delivery
+Security, Identity and Compliance

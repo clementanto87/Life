@@ -1,0 +1,15 @@
+
+C
+java:S1444#"'Make this "public static i" field final(¤œÃ]8¼©öìß.
+i
+java:S1104#"MMake i a static final constant or non-public and provide accessors if needed.(¤œÃ]8¼©öìß.
+P
+java:S1128".Remove this unused import 'java.time.Instant'.(Â‚éñÿÿÿÿÿ8¼©öìß.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(²¨ç÷8¼©öìß.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(£âéú8¼©öìß.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Éò¬ışÿÿÿÿ8¼©öìß.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¼©öìß.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(‰İÿ…8¼©öìß.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ğ³¸Üûÿÿÿÿ8¼©öìß.
+W
+java:S1118"":Add a private constructor to hide the implicit public one.(‹çÜº8¼©öìß.

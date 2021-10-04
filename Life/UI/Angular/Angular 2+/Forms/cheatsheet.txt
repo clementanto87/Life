@@ -50,6 +50,11 @@ export class AppComponent implements OnInit {
     this.addFriends();
   }
 
+
+ get roleControls() {
+    return (this.myForm.get('roles') as FormArray).controls;
+  }	
+
   addFriends() {
     const friends = this.form.get('friends') as FormArray;
     const friend = this.fb.group({
